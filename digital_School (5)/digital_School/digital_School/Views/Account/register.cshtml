@@ -1,0 +1,481 @@
+﻿@model digital_School.ViewModel.tbl_ClientValidation
+@{
+    ViewBag.Title = "ClientRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/e1303a18ed.js" crossorigin="anonymous"></script>
+}
+
+
+@section ValidateFields{
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+    @*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+    @*<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>*@
+
+
+    <script>
+
+
+        function RegisterClient(evt) {
+            evt.preventDefault();
+            if (client_Error == true) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+    </script>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .errormessage {
+            color: red !important;
+            font-size: 13px !important;
+            float: right;
+        }
+
+        .errspan {
+            float: right;
+            margin-right: 8px;
+            margin-top: -32px;
+            position: relative;
+            z-index: 2;
+            color: red;
+            cursor: pointer;
+            display: none;
+        }
+
+
+        input.input-validation-error {
+            border: 0.083em solid red;
+        }
+
+        select.input-validation-error {
+            border: 0.083em solid red;
+        }
+
+        select.input-validation-error {
+            border: 0.083em solid red;
+        }
+    </style>
+}
+
+@{
+    //Session["activetab"] = null;
+    if (string.IsNullOrEmpty(Session["btn"] as string) || Session["btn"] == null)
+    {
+        <script>
+            $(function () {
+                ScrollWindow();
+                var b = document.getElementById("Section-1");
+                b.style.display = "block";
+                $('.active').removeClass('active');
+                $('#Step-1').addClass('active');
+            });
+        </script>
+
+    }
+    else if (Session["btn"].ToString() == "1")
+    {
+        <script>
+            $(function () {
+                ScrollWindow();
+                var b = document.getElementById("Section-2");
+                b.style.display = "block";
+                $('.active').removeClass('active');
+                $('#Step-2').addClass('active');
+            });
+        </script>
+    }
+    else
+    {
+        Session["btn"] = null;
+
+    }
+
+
+    @*if(!string.IsNullOrEmpty( Session["loadpage"] as string))
+        {
+            if(Session["loadpage"].ToString() != "1")
+            {
+                <script>
+                     $('.active').removeClass('active');
+                        $('#Step-2').addClass('active');
+                        basicinfo.style.display = "none";
+                        ScrollWindow();
+                        upimage.style.display = "block";
+                        popup.style.display = "block";
+
+                </script>
+            }
+        }*@
+}
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/Content/images/bg_1.jpg')" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+                <h1 class="mb-3 bread">Client Registration</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="@Url.Action("Index","Home")" >Home <i class="ion-ios-arrow-forward"></i></a></span><span>Accounts <i class="ion-ios-arrow-forward"></i> Client Registration <i class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@using (Html.BeginForm("register", "Account", FormMethod.Post, new { encType = "multipart/form-data", @id = "client" }))
+{
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb mt-5 mb-5" id="Register">
+
+        @*@if (!ViewData.ModelState.IsValid)
+            {  <script>
+                $('.active').removeClass('active');
+                    $('#Step-1').addClass('active');
+                    basicinfo.style.display = "block";
+                    ScrollWindow();
+                 upimage.style.display = "none";
+                </script>
+
+            }*@
+
+
+
+        }
+
+
+        <div class="container p-0" style="width: 80%;">
+            <div class="row mb-0 no-gutters w-100 form-group">
+                <div class="col-lg-6 float-left float-md-none">
+                    <button class="form-button p-2" id="Step-1" type="button" onclick="ShowBasic()">Client Information</button>
+                </div>
+                <div class="col-lg-6 float-left float-md-none">
+                    <button class="form-button p-2" id="Step-2" type="submit" name="tabButton" value="next" onclick="Verify_Step1(this)">Upload Image</button>
+                </div>
+            </div>
+            <div class="row mt-0 p-0 no-gutters w-100">
+                @*@using (Html.BeginForm("Profile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
+                <!--- Section 1: Basic Information -->
+                <div class="col-lg-12 form-section" id="Section-1" name="Section1">
+                    <div class="row mt-0 p-0 pt-3 pb-3 no-gutters w-100">
+                        <div class="col-lg-6">
+                            <div class="form-group mt-4 mb-3">
+                                <label>Full Name</label>
+                                @*<input type="text" class="custom-control" placeholder="enter your full name" />*@
+                                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "custom-control", @placeholder = "enter your full name", @autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "errormessage" })
+
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label>Email ID</label>
+                                @*<input type="text" class="custom-control" placeholder="enter your email address" />*@
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "custom-control", @placeholder = "enter your email address", @autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "errormessage" })
+
+
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label>Password</label>
+                                @*<input type="text" class="custom-control" placeholder="enter a password" />*@
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "custom-control", @placeholder = "enter a password", @autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "errormessage" })
+
+                            </div>
+
+                            <div class="form-group  mb-3 mb-lg-4">
+                                <label>Confirm Password</label>
+                                @*<input type="text" class="custom-control" placeholder="re-enter password" />*@
+                                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "custom-control", @type="password",@placeholder = "re-enter password", @autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "errormessage" })
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group mb-3  mt-lg-4">
+                                <label>Cnic</label>
+                                @Html.EditorFor(model => model.Cnic, new { htmlAttributes = new { @class = "custom-control", @placeholder = "Enter Cnic", @autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Cnic, "", new { @class = "errormessage" })
+                            </div>
+                            <div class="form-group mb-3 ">
+                                <label>Mobile Number</label>
+                                <div style="width: 100%; overflow: hidden">
+                                    <div class="float-left" style="width: 15%">
+                                        <input name="code" id="code" type="text" class="custom-control ronly" value="+92" readonly="readonly" placeholder="+92" />
+
+                                    </div>
+                                    <div class="float-left" style="width: 85%">
+                                        @*<input type="text" class="custom-control inp" />*@
+                                        @Html.EditorFor(model => model.Contact_No, new { htmlAttributes = new { @type = "number", @class = "custom-control inp", @placeholder = "xxxxxxxxxxxx", @autocomplete = "off" } })
+
+                                    </div>
+
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Contact_No, "", new { @class = "errormessage" })
+
+                            </div>
+
+                            <div class="form-group mb-3  mb-lg-4">
+                                <label>Gender</label><br />
+                                @Html.RadioButtonFor(model => model.Gender, "Male", new { @checked = "checked", @class = "form-radio" })
+                                <label>Male</label>
+                                @Html.RadioButtonFor(model => model.Gender, "Female", new { @class = "form-radio" })
+                                <label>Female</label>
+                                @Html.RadioButtonFor(model => model.Gender, "Other", new { @class = "form-radio" })
+                                <label>Other</label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4 mb-4 no-gutters w-100">
+                            <div class="col-6">
+                                <div class="form-group">
+                                </div>
+
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" style="text-align: right">
+                                    <button name="tabButton" type="button" value="next" onclick="Verify_Step1(this)" class="navigate-buttons p-1">
+                                        <span class="myicon"><i class="fas fa-3x fa-arrow-circle-right"></i></span>
+                                        <span class="mytext">Next Step</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 form-section" id="Section-2">
+                    <div class="row mt-0 p-0 pt-3 pb-3 no-gutters w-100">
+                        <div class="col-lg-12">
+                            <div class="form-group mt-5 mb-3" style="text-align: center">
+                                <img src="~/Content/images/Default Image.png" id="blah" alt="user image" class="profile-pic img-thumbnail rounded-circle" />
+                                <br />
+                                <label for="imgInp" class="ChooseFile mt-4 mb-2 p-2">Select Image</label><br />
+                                <input type='file' id="imgInp" name="imgInp" accept="image/png,image/jpg,image/jpeg" onchange="validateFileType()" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 mb-4 no-gutters w-100">
+                            <div class="col-6">
+                                <div class="form-group mb-3 mb-lg-0" style="text-align: left; ">
+                                    @*<button class="navigate-buttons p-1" name="next" value="next" type="button" onclick="ShowBasic()">
+                                            <span class="myicon"><i class="fas fa-3x fa-arrow-circle-left"></i></span>
+                                            <span class="mytext">Previous Step</span>
+                                        </button>*@
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" style="text-align: right">
+                                    <button type="submit" name="tabButton" class="navigate-buttons p-1" value="finish">
+                                        <span class="myicon"><i class="fas fa-3x fa-check-circle"></i></span>
+                                        <span class="mytext">Finish</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+}
+<script>
+
+$( document ).ready(function() {
+    $('#Step-1').addClass('active');
+    $('#Step-1').click();
+
+    $('#Step-2').prop('disabled', true);
+
+
+
+
+
+
+});
+
+</script>
+
+
+<script>
+     var basicinfo = document.getElementById("Section-1");
+    var upimage = document.getElementById("Section-2");
+
+
+
+ function Verify_Step1(btnClicked)
+{
+       var $form = $(btnClicked).parents('form');
+
+
+        $.ajax({
+            type: "POST",
+            url: $form.attr('action'),
+           // data: $('#client').serialize() + '&' + encodeURIComponent(btnClicked.name15) + '=' + encodeURIComponent(btnClicked.value),
+            data: $form.serialize() + '&' + encodeURIComponent("tabButton") + '=' + encodeURIComponent("next"),
+
+            error: function(xhr, status, error) {
+                    window.stop();
+             },
+            success: function (response) {
+                 var basicinfo = document.getElementById("Section-1");
+                 var upimage = document.getElementById("Section-2");
+                var bb = '@Session["btn"]';
+                $('.active').removeClass('active');
+                $('#Step-1').prop('disabled', true);
+
+                    $('#Step-2').addClass('active');
+                    basicinfo.style.display = "none";
+                    ScrollWindow();
+                    upimage.style.display = "block";
+
+                    window.stop();
+
+                    @*@{
+                        Session["btn"] = "0";
+                    }*@
+
+                }
+
+
+
+
+        });
+
+  return false;// if it's a link to prevent post
+
+}
+
+
+
+
+
+
+
+
+
+
+
+    function ShowBasic() {
+        if (basicinfo.style.display == "none") {
+            $('.active').removeClass('active');
+            $('#Step-1').addClass('active');
+            basicinfo.style.display = "block";
+            ScrollWindow();
+            upimage.style.display = "none";
+        }
+
+        else {
+            $('.active').removeClass('active');
+            $('#Step-1').addClass('active');
+            basicinfo.style.display = "block";
+            ScrollWindow();
+            upimage.style.display = "none";
+        }
+    }
+
+    function ShowImage() {
+        if (upimage.style.display == "none") {
+            $('.active').removeClass('active');
+            $('#Step-2').addClass('active');
+            upimage.style.display = "block";
+            ScrollWindow();
+            basicinfo.style.display = "none";
+
+
+        }
+
+        else {
+            $('.active').removeClass('active');
+            $('#Step-2').addClass('active');
+            upimage.style.display = "block";
+            ScrollWindow();
+            basicinfo.style.display = "none";
+        }
+    }
+
+    function ScrollWindow() {
+        $("html, body").animate({ scrollTop: 650 }, 600);
+    }
+
+
+    function validateFileType() {
+        var fileName = document.getElementById("imgInp").value;
+        var idxDot = fileName.lastIndexOf(".") + 1;
+        var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+        if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
+            //TO DO
+        } else {
+            $('#DummyButton').trigger('click');
+        }
+    }
+
+
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#imgInp").change(function () {
+        readURL(this);
+    });
+
+
+
+
+
+
+
+
+     function Check_Validation() {
+        $.get("/accounts/Check_Validation", function (data) {
+           var p= data.check
+            if (p == "true") {
+                 $('.active').removeClass('active');
+                $('#Step-1').addClass('active');
+                basicinfo.style.display = "none";
+
+                upimage.style.display = "block";
+            }
+        });
+    }
+
+
+
+</script>
+
+

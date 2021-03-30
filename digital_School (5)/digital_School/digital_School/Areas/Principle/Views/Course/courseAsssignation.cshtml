@@ -1,0 +1,280 @@
+﻿@model digital_School.Models.CourseAssignToTeacher
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Principle/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <h2 style="text-align:center">Course Assigning to Teacher </h2>
+        <div class="form-group">
+            <div class="col-md-12">
+                <label @*style="width: 150px;text-align: right;padding-right: 5px;font-size: 16px;"*@="control-label"> Select Class</label>
+                @*<select name="DepartmentId" id="DepartmentId" style="width: 200px;padding: 2px 4px; height: 25px; font-size: 14px;">
+                        <option value=0></option>
+                        @foreach (var department in ViewBag.schoolclass)
+                        {
+                            <option value="@department.Class_Id">@department.Name</option>
+                        }
+                    </select><label id="DeptErrorLabel" style="color: red;"></label>*@
+
+                @Html.DropDownList("ddlstudentname", (SelectList)ViewData["class_name"], "--Select Class--", new { @class = "form-control", @id = "DepartmentId" })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <label @*style="width: 150px;text-align: right;padding-right: 5px;font-size: 16px;"*@="control-label">Teacher</label>
+                <select name="TeacherId" id="TeacherId" @*style="width: 200px; padding: 2px 4px; height: 25px; font-size: 14px;"*@ class="form-control">
+                    <option value=0></option>
+                </select><label id="TeacherErrorLabel" style="color: red;"></label>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <label @*style="width: 150px;text-align: right;padding-right: 5px;font-size: 16px;"*@="control-label">Course Code</label>
+                <select name="CourseId" id="CourseId" @*style="width: 200px; padding: 2px 4px; height: 25px; font-size: 14px;"*@ class="form-control">
+                    <option value=0></option>
+                </select><label id="CourseErrorLabel" style="color: red;"></label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <label @*style="width: 150px;text-align: right;padding-right: 5px;font-size: 16px;"*@ class="control-label">Course Name</label>
+                <input id="cName" type="text" @*style="width: 200px; padding: 2px 4px; height: 25px; font-size: 14px;"*@ readonly="" class="form-control" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>
+                    <label @*style="width: 280px;text-align: right;padding-right: 5px;font-size: 16px;"*@></label>
+                    <input type="submit" id="Submit" value="Assign" class="btn btn-success" />
+                </p>
+            </div>
+        </div>
+    </div>
+    @*<div class="form-group">
+            @Html.Label("LocationGroupDD", "Location GroupDD Name", htmlAttributes: new { @class = "control-label" })
+            @Html.DropDownList("LocationGroupDDId", ViewBag.LocationGroupDDSelectList as SelectList, "Select Location GroupDD", htmlAttributes: new { @class = "form-control", @id = "LocationGroupDD" })
+
+        </div>
+        <div class="form-group">
+            @Html.Label("LocationDD", "LocationDD Name", htmlAttributes: new { @class = "control-label" })
+            @Html.DropDownList("LocationDDId", ViewBag.LocationDDListSelectList as SelectList, "Select LocationDD", htmlAttributes: new { @class = "form-control", @disabled = "disabled", @id = "LocationDD" })
+        </div>*@
+}
+<div style="clear: both;"></div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+         window.onload = function () {
+          alert("@ViewBag.Message");
+          };
+    </script>
+
+}
+
+    @*<script type="text/javascript">
+              $(document).on('change','#LocationGroupDD', function(){
+                  var LocationGroupDDId = $(this).val();
+                  $('#LocationDD').empty();
+                  if (LocationGroupDDId) {
+                    $.ajax({
+                        type: "GET",
+                        url: '@Url.Action("GetLocationDDByLocationGroupDD", "YourControlleName")',
+                        data: { LocationGroupDDId: LocationGroupDDId},
+                        success: function(data) {
+                            if (data.length > 0) {
+                                $('#LocationDD').prop("disabled", false);
+                                $('#LocationDD').append($("<option>").val("").text("Select LocationDD"));
+                                $(data).each(function(index, item) {
+                                    $('#LocationDD').append($("<option>").val(item.LocationDDId).text(item.LocationDDName));
+                                });
+                            } else {
+                              $('#LocationDD').append($("<option>").val("").text("LocationDD List Is Empty"));
+                            }
+                        }
+                    });
+                } else {
+                    $('#LocationDD').prop("disabled", true);
+                    $('#LocationDD').append($("<option>").val("").text("Select Location GroupDD First"));
+                }
+              });
+        </script>
+        }*@
+    <script>
+
+    $(document).ready(function() {
+
+        $("#DepartmentId").change(function() {
+            ResetLabel();
+
+            //ResetErrorLabel();
+            var departmentId = $("#DepartmentId").val();
+            var jsnFormatData = { deptId: departmentId };
+            $("#TeacherId").empty();
+            $("#TeacherId").append('<option value=0></option>');
+            $.ajax({
+                type: "POST",
+                 url: '@Url.Action("GetTeachersByDeptId", "Course", new { Area = "Principle" })',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function(data) {
+
+                    $.each(data, function(key, value) {
+                        $("#TeacherId").append('<option value=' + value.Id + '>' + value.Name + '</option>');
+                    });
+                }
+            });
+
+            $("#CourseId").empty();
+            $("#CourseId").append('<option value=0></option>');
+            jsnFormatData = { deptId: departmentId };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetCoursesByDeptId", "Course", new { Area = "Principle" })',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function(dataa) {
+
+                    $.each(dataa, function(key1, value1) {
+                        $("#CourseId").append('<option value=' + value1.courseId + '>' + value1.Code + '</option>');
+                    });
+                }
+            });
+            return false;
+        });
+
+        @*$("#TeacherId").change(function() {
+            var teacherId = $("#TeacherId").val();
+            var jsnFormatData = { teacherId: teacherId };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetTeachersById", "Home", new { Area = "Principle" })',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function(data) {
+                    //alert(data.TakenCredit + " " + data.RemainingCredit);
+                    //$("#tCredit").val(data.TakenCredit);
+                    //$("#rCredit").val(data.RemainingCredit);
+                }
+            });
+            if (teacherId === 0) {
+                $("#rCredit").val("");
+                $("#tCredit").val("");
+            }
+            return false;
+        });*@
+
+        $("#CourseId").change(function() {
+            var courseId = $("#CourseId").val();
+            var jsnFormatData = { courseId: courseId };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetCourseById", "Course", new { Area = "Principle" })',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function (dataa) {
+
+                    $.each(dataa, function (key1, value1) {
+                        $("#cName").val(value1.courseName);
+                    });
+                    //$("#cCredit").val(data.Credit);
+                }
+            });
+            if (courseId === 0) {
+                $("#cName").val("");
+                //$("#cCredit").val("");
+            }
+            return false;
+        });
+
+        $("#Submit").click(function() {
+            var errorValue = 0;
+            // ResetLabel();
+            var departmentId = $("#DepartmentId").val();
+
+            //if (departmentId === 0) {
+            //    $("#DeptErrorLabel").text("Select One Class!");
+            //    errorValue = 1;
+            //}
+
+            var teacherId = $("#TeacherId").val();
+
+            if (teacherId === 0) {
+                $("#TeacherErrorLabel").text("Select One Teacher!");
+                errorValue = 1;
+            }
+
+            var courseId = $("#CourseId").val();
+            if (courseId === 0) {
+                $("#CourseErrorLabel").text("Select One Course!");
+                errorValue = 1;
+            }
+            if (errorValue === 1) {
+                return false;
+            } else {
+
+
+
+                var jsnFormatData = { Class_Id: departmentId, TeacherId: teacherId, courseId: courseId };
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("SaveAssignCourse", "Course", new { Area = "Principle" })',
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(jsnFormatData),
+                        dataType: "json",
+                        success: function(data) {
+
+                            if (data === true)
+                                alert("Successfully Assigned");
+                            else {
+                                alert("Course is already Assigned");
+                            }
+                            Reset();
+                        }
+                    });
+
+                }
+                    return false;
+                }
+
+            );
+            return false;
+    });
+
+        function Reset() {
+
+            $("#DepartmentId").prop("selectedIndex", 0);
+            $("#CourseId").empty();
+            $("#TeacherId").empty();
+            $("#cName").val("");
+            $("#DepartmentId").prop("selectedIndex", 0);
+        }
+
+        function ResetLabel() {
+            $("#DeptErrorLabel").text("");
+            $("#TeacherErrorLabel").text("");
+            $("#CourseErrorLabel").text("");
+        }
+
+    </script>
+

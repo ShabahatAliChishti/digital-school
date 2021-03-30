@@ -1,0 +1,93 @@
+﻿textarea {
+    min-height: 150px !important;
+    max-height: 300px !important;
+}
+
+.btn, .btnblack {
+    background-color: #afa939;
+    color: white;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+    .btn:hover {
+        color: white;
+        background-color: #ded871;
+    }
+
+    .btn:visited {
+        border: none;
+        color: white;
+    }
+
+.btnblack {
+    background-color: #222831;
+    cursor: pointer;
+}
+
+    .btnblack:hover {
+        background-color: #494C50;
+        color: white;
+    }
+
+#Section-Head {
+    color: #222831;
+}
+
+.mycontrol {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: left;
+    height: 40px;
+}
+
+.newsletter-section {
+    background-color: #fcfcfc;
+}
+
+.myradio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    color: #AFA939;
+    height: 32px;
+    width: 32px;
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+}
+
+    .myradio:focus {
+        outline: none !important;
+    }
+
+    .myradio:checked {
+        outline: none !important;
+    }
+
+
+
+.one:checked {
+    background-color: #222831;
+    border: 1px solid #e0e0e0;
+}
+
+.two:checked {
+    background-color: #afa939;
+}
+
+.three:checked {
+    background-color: saddlebrown;
+}
+
+input[type="file"] {
+    display: none !important;
+}

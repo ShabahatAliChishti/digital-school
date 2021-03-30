@@ -1,0 +1,49 @@
+﻿@model digital_School.Models.TimeTable
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="container">
+        <h2 style="text-align:center">Unassign Rooms</h2>
+        <div class="form-group" style="text-align: center">
+            <input type="button" value="Unallocate All Room" id="UnallocateRooms" class="btn btn-success" />
+        </div>
+    </div>
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#UnallocateRooms").click(function () {
+
+            var r = confirm("Are you sure to unallocate all classrooms info?");
+            if (r == true) {
+
+                var jsnFormatData = { name: r};
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("UnallocateAllRooms", "RoomAllocation", new { Area = "Principle" })',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(jsnFormatData),
+                    dataType: "json",
+                    success: function (data) {
+
+                        if (data == true) {
+                            alert("All sections unallocated successffully!");
+                        } else {
+                            alert("No section are available to unallocate");
+                        }
+                    }
+                });
+
+            }
+            return false;
+
+        });
+    });
+
+</script>

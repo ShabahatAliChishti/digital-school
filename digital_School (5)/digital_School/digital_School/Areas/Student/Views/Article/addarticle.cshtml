@@ -1,0 +1,121 @@
+﻿@model  digital_School.ViewModel.tbl_ArticleValidation
+
+@{
+    Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
+
+}
+
+<script src="~/Themes/ckeditor/ckeditor.js"></script>
+
+<div class="content-wrapper" style="margin-top:50px;">
+    <div class="card card-info">
+        <div class="card-header ">
+            <h3 class="card-title ">Article Form</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        @using (Html.BeginForm("addarticle", "Article", FormMethod.Post, new { @id = "form", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            </div>
+
+            <form class="form-horizontal">
+                <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Article Type</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.DropDownListFor(m => m.Article_TypeId, (IEnumerable<SelectListItem>)ViewBag.articletypelist, "--Select Article Type--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.Article_TypeId, "", new { @class = "text-danger" })
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Title</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Titlle") } })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            @*<input type="email" class="form-control" id="inputEmail3" placeholder="Email">*@
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Image</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.TextBoxFor(model => model.UserImageFIle, new { @accept = "image/png,image/jpg,image/jpeg", type = "file", @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.UserImageFIle, "", new { @class = "text-danger" })
+
+                            @*<input type="password" class="form-control" id="inputPassword3" placeholder="Password">*@
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Short Description</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.TextAreaFor(model => model.shortDes, 5, 40, htmlAttributes: new { style = "width: 100%; max-width: 100%;", placeholder = @Html.DisplayName("Enter Short Description") })
+                            @Html.ValidationMessageFor(model => model.shortDes, "", new { @class = "text-danger" })
+
+                            @*<input type="password" class="form-control" id="inputPassword3" placeholder="Password">*@
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Long Description</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.TextAreaFor(model => model.longDes, 8, 40, htmlAttributes: new { required = "required", style = "width: 100%; max-width: 100%;", @id = "FullDescription", placeholder = @Html.DisplayName("Enter Long Description") })
+                            @Html.ValidationMessageFor(model => model.longDes, "", new { @class = "text-danger" })
+                            <script>
+
+                                CKEDITOR.replace("FullDescription");
+                            </script>
+
+
+                            @*<input type="password" class="form-control" id="inputPassword3" placeholder="Password">*@
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <button type="submit" class="btn btn-info float-right">ADD</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <button type="submit" class="btn btn-default float-left ">Cancel</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.card-footer -->
+            </form>
+        }
+    </div>
+
+
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+         window.onload = function () {
+          alert("@ViewBag.Message");
+          };
+    </script>
+
+}

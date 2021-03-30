@@ -1,0 +1,451 @@
+﻿@model digital_School.ViewModel.StudentMasterViewModel
+@{
+    ViewBag.Title = "result";
+    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style="margin-top:50px;">
+
+    <div class="card card-info">
+        <div class="card-header ">
+            <h3 class="card-title ">Result</h3>
+        </div>
+        @*@{
+                var data = (edu_course.Models.StudentMasterViewModel)ViewData["query"];
+            }*@
+        <div class="row col-md-8 " style="padding: 15px 0px 15px 0px ">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Student Result Form</button>
+        </div>
+        <div id="myModal" class="modal fade " role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Student Result </h4>
+                        <button type="button" class="close " data-dismiss="modal">&times;</button>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="container">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+                                    <hr />
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                </div>
+
+
+                                @Html.HiddenFor(model => model.Id, new { @id = "studentidd" })
+                                @Html.HiddenFor(model => model.StudentIdtable, new { @id = "StudentIdtable" })
+                                @Html.HiddenFor(model => model.ClassId, new { @id = "ClassId" })
+                                @Html.HiddenFor(model => model.SectionId, new { @id = "SectionId" })
+
+
+
+
+                                <div class="row">
+                                    <div class="form-group col-md-6 ">
+                                        @Html.Label("Name", htmlAttributes: new { @class = "control-label " })
+                                        @Html.EditorFor(model => Model.Name, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @id = "txtStudentName" } })
+                                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                    </div>
+
+
+                                    <div class="form-group col-md-6 ">
+                                        @Html.Label("Roll No", new { @class = "control-label " })
+
+
+                                        @Html.EditorFor(model => Model.RegNo, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @id = "ddRegistrationNo" } })
+                                        @Html.ValidationMessageFor(x => Model.RegNo, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="form-group col-md-6 ">
+                                        @Html.Label("Class", new { @class = "control-label " })
+
+                                        @Html.EditorFor(model => Model.ClassName, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @id = "ddClass" } })
+                                        @Html.ValidationMessageFor(x => Model.ClassName, "", new { @class = "text-danger" })
+
+                                    </div>
+                                    <div class="form-group col-md-6 ">
+                                        @Html.Label("Exam", htmlAttributes: new { @class = "control-label " })
+
+                                        @*@Html.DropDownList("Select Type", (IEnumerable<SelectListItem>)ViewData["BlogType"], "Select Type", new { @class = "form-control" })*@
+                                        @Html.DropDownListFor(m => m.ExamId, (IEnumerable<SelectListItem>)ViewBag.exam, "Select Exam ", new { required = "required", @class = "form-control", @id = "ddExame" })
+                                        @Html.ValidationMessageFor(x => Model.ExamId, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4 ">
+                                        @Html.Label("Section", htmlAttributes: new { @class = "control-label " })
+                                        @Html.EditorFor(model => Model.SectionName, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @id = "txtSectionName" } })                                    @Html.ValidationMessageFor(x => Model.ClassName, "", new { @class = "text-danger" })
+                                        @Html.ValidationMessageFor(x => Model.SectionName, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <fieldset>
+                                    <legend>Student Marks</legend>
+                                    <div class="row">
+                                        <div class="form-group col-md-4 ">
+                                            @Html.Label("Course", htmlAttributes: new { @class = "control-label " })
+
+                                            @*@Html.DropDownList("Select Type", (IEnumerable<SelectListItem>)ViewData["BlogType"], "Select Type", new { @class = "form-control" })*@
+                                            @Html.DropDownListFor(m => m.CourseId, (IEnumerable<SelectListItem>)ViewBag.course, "Select Course ", new { required = "required", @class = "form-control", id = "ddSubject" })
+                                            @Html.ValidationMessageFor(x => Model.CourseId, "", new { @class = "text-danger" })
+
+                                        </div>
+                                        <div class="form-group col-md-4 ">
+                                            @Html.Label("Total Marks", new { @class = "control-label " })
+
+                                            @Html.EditorFor(model => model.TotalMarks, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("0"), @id = "txtTotalMarks", @style = "text-align:right" } })
+                                            @Html.ValidationMessageFor(model => model.TotalMarks, "", new { @class = "text-danger" })
+
+                                        </div>
+
+
+                                        <div class="form-group col-md-4 ">
+                                            @Html.Label("Marks Obtained", new { @class = "control-label " })
+
+                                            @Html.EditorFor(model => model.MarksObtained, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("0"), @id = "txtMarksObtained", @style = "text-align:right" } })
+                                            @Html.ValidationMessageFor(model => model.MarksObtained, "", new { @class = "text-danger" })
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="btnAddToList" style="float:right;margin-bottom:10px " type="button" name="addtolist" value=" Add To List" class="btn btn-danger" />
+                                    </div>
+
+                                    <table class="table table-condensed " id="tableStudentMarks">
+                                        <thead>
+                                            <tr style="font-size:14px; margin-top:5px;">
+                                                <th>Subject ID</th>
+                                                <th> Subject</th>
+                                                <th>Total Marks</th>
+                                                <th>Marks Obtained</th>
+                                                <th>Percentage</th>
+                                                <th>Action</th>
+                                            </tr>
+
+
+
+
+
+                                        </thead>
+
+                                    </table>
+
+                                </fieldset>
+
+
+
+                            }
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <div class="form-group ">
+
+                            <button type="button" class="btn btn btn-success" id="btnSave"> Save </button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <fieldset>
+            <legend>Student Details</legend>
+            <table style="width:100%" class="table table-borderless" id="tableLoadStudent">
+
+
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Exame</th>
+                        <th>Class Name</th>
+                        <th>Roll Number</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+
+                @*@foreach (var item in Model.ListOfStudentModel)
+                    {
+                        if (item.Name != null && item.ExamName != null && item.ClassName != null && item.RegNumer != null)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Name
+                                </td>
+                                <td>
+                                    @item.ExamName
+                                </td>
+                                <td>
+                                    @item.ClassName
+                                </td>
+                                <td>
+                                    @item.RegNumer
+                                </td>
+                                <td>
+                                    <input type="button" value="Display Marks" name="details" onclick='StudentMarks(@item.StudentId)' class="btn btn-default" />
+                                </td>
+                            </tr>
+                        }
+                    }*@
+
+            </table>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Student Marks</legend>
+            <div id="divStudentMarks">
+
+            </div>
+        </fieldset>
+
+    </div>
+
+    </div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        LoadStudent();
+
+        $("#btnAddToList").click(function () {
+            AddMarksIntoTable();
+        });
+        $("#btnSave").click(function () {
+            AddStudentmarksInToDataBase();
+        });
+    });
+
+
+    function LoadStudent() {
+        $.ajax({
+            async: true,
+            type: 'GET',
+            dataType: 'JSON',
+            url:'@Url.Action("LoadStudent","Result", new { Area = "Teacher" })',
+            contentType: "application/json; charset=utf-8",
+
+            success: function(data) {
+
+                var tableRow = "";
+                $.each(data,
+                    function (index, value) {
+                        tableRow += '<tr><td>' +
+                            value.Name +
+                            '</td><td>' +
+                            value.ExamName +
+                            '</td><td>' +
+                            value.ClassName +
+                            '</td><td>' +
+                            value.RegNumer +
+                            '</td><td>' +
+                            "<input type='button' value='Display Marks' name='details' onclick=StudentMarks(" +
+                            value.StudentId +
+                            ") class='btn btn-success'/> <td><tr>";
+                    });
+
+
+        $("#tableLoadStudents").find('tr:gt(0)').remove();
+                $("#tableLoadStudent").append(tableRow);
+            },
+            error: function() {
+                alert('There is some problem to process your request');
+            }
+
+        });
+
+
+
+
+    }
+
+
+
+    function StudentMarks(studentId) {
+        debugger
+        $.ajax({
+            async: true,
+            type: 'GET',
+            dataType: 'HTML',
+            contentType: "application/json; charset=utf-8",
+                        url:'@Url.Action("GetStudentMarks","Result", new { Area = "Teacher" })',
+            data: { studentId: studentId },
+            success: function(data) {
+                debugger
+                $('#divStudentMarks').html(data);
+
+            },
+            error: function() {
+                alert('There is some problem to process your request');
+            }
+
+        });
+    }
+
+
+
+    function AddMarksIntoTable() {
+
+        if ($("#ddSubject option:selected").text() === "") {
+            alert("Please Select Subject.");
+            $("#ddSubject").focus();
+            return;
+        }
+        if ($("#txtTotalMarks").val() === "") {
+            alert("Please enter total marks");
+            $("#txtTotalMarks").focus();
+            return;
+        }
+        if ($("#txtMarksObtained").val() === "") {
+            alert("Please enter marks obtained");
+            $("#txtMarksObtained").focus();
+            return;
+        }
+        if (parseInt($("#txtTotalMarks").val()) < parseInt($("#txtMarksObtained").val())) {
+            alert("Marks obtained always should be less or equal  than total ma")
+        }
+
+        var courseId = $("#ddSubject").val();
+        var tableMarks = $("#tableStudentMarks").find("tr:gt(1)");
+        var isReturn = false;
+        $.each(tableMarks,
+            function() {
+                var listedCourseId = $(this).find("td:eq(0)").text();
+                var listCourse = $(this).find("td:eq(1)").text();
+                if (listedCourseId === courseId) {
+                    alert('Course: ' + listCourse + ' is already listed');
+                    isReturn = true;
+                    return;
+                }
+
+                });
+
+        if (isReturn === true) {
+            return false;
+        }
+
+        var marksTable = $("#tableStudentMarks");
+        var course = $("#ddSubject option:selected").text();
+        var totalMarks = $("#txtTotalMarks").val();
+        var marksObtained = $("#txtMarksObtained").val();
+        var percentage = (parseInt(marksObtained) / parseInt(totalMarks)) * 100;
+        var rowValue = "<tr ><td>" +
+            courseId +
+            "</td><td>" +
+            course +
+            "</td><td>" +
+            totalMarks +
+            "</td><td>" +
+            marksObtained +
+            "</td><td>" +
+            percentage +
+            "</td><td>" +
+            " <input type='button' value='Remove' name='remove' class ='btn btn-danger' onclick='removeMarks(this)'/></td></tr>";
+        $("#tableStudentMarks").append(rowValue);
+        ResetMarksList()
+        $("#ddSubject").focus;
+    }
+
+    function removeMarks(rowValue) {
+        $(rowValue).closest('tr').remove();
+    }
+
+    function ResetMarksDetailsAfterSaving() {
+        $("#txtStudentName").val('');
+        $("#ddExame").val(1);
+        $("#ddClass").val('');
+        $("#txtSectionName").val('');
+        $("#ddRegistrationNo").val('');
+        $("#tableStudentMarks").find("tr:gt(1)").remove();
+        ResetMarksList();
+        $("#txtStudentName").focus();
+    }
+
+    function ResetMarksList() {
+        $("#ddSubject").val(1);
+        $("#txtTotalMarks").val('');
+        $("#txtMarksObtained").val('');
+    }
+
+
+
+    function AddStudentmarksInToDataBase() {
+
+
+
+        var objstudentViewModel = {};
+        var ListofStudentMarks = [];
+
+
+
+        var tableMarks = $("#tableStudentMarks").find("tr:gt(1)");
+
+
+
+
+        $.each(tableMarks,
+            function () {
+                debugger
+                var StudentMarks = {};
+                StudentMarks.CourseId = $(this).find("td:eq(0)").text();
+                StudentMarks.TotalMarks = $(this).find("td:eq(2)").text();
+                StudentMarks.MarksObtained = $(this).find("td:eq(3)").text();
+                StudentMarks.Percentage = $(this).find("td:eq(4)").text();
+                ListofStudentMarks.push(StudentMarks);
+            });
+        debugger
+        objstudentViewModel.StudentId = $("#studentidd").val();
+        objstudentViewModel.StudentIdtable = $("#StudentIdtable").val();
+        objstudentViewModel.ClassId = $("#ClassId").val();
+        objstudentViewModel.SectionId = $("#SectionId").val();
+        objstudentViewModel.Name = $("#txtStudentName").val();
+        objstudentViewModel.Exam_Id = $("#ddExame").val();
+        objstudentViewModel.ClassName = $("#ddClass").val();
+        objstudentViewModel.RegNo = $("#ddRegistrationNo").val();
+        objstudentViewModel.SectionName = $("#txtSectionName").val();
+        objstudentViewModel.ListofStudentMarks = ListofStudentMarks;
+
+        debugger
+        $.ajax({
+            async: true,
+            type: 'POST',
+            dataType: 'JSON',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(objstudentViewModel),
+            url: '@Url.Action("result","Result", new { Area = "Teacher" })',
+            success: function (data) {
+                if (data.status === true) {
+                    alert(data.message);
+                    ResetMarksDetailsAfterSaving();
+                    LoadStudent();
+                }
+            },
+            error: function () {
+                alert("There Is Some Problem your Request");
+            }
+        })
+
+    }
+
+</script>
+

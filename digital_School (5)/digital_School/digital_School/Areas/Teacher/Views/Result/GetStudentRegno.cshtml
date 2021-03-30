@@ -1,0 +1,91 @@
+﻿@model digital_School.ViewModel.tbl_StudentValidation
+@{
+    ViewBag.Title = "GetStudentRegno";
+    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper" style="margin-top:50px;">
+    <div class="card card-info">
+        <div class="card-header ">
+            <h3 class="card-title ">Result</h3>
+        </div>
+
+        
+                <h2 style="color:black; text-align:center"><b>Select Student Registeration Number</b></h2>
+                
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        </div>
+
+
+
+                                            <form class="form-horizontal">
+                                                <div class="card-body">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-1"></div>
+                                                        <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Regisration Number</label>
+                                                        <div class="col-md-7 col-lg-8">
+                                                            @Html.DropDownListFor(model => model.RegNo, (SelectList)ViewBag.Regno, "Select Registeration Number", new { required = "required", @class = "form-control", @id = "ddCourseId" })
+
+                                                            @Html.ValidationMessageFor(x => Model.RegNo, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+
+                                                    @*<div class="form-group">
+                                                            @Html.Hidden("RedirectTo", @Url.Action("viewassignment", "Home", new { Area = "Student" }))
+
+                                                        </div>*@
+
+
+                                                    
+
+                                                    <div class="card-footer">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-sm-6 col-6">
+                                                                @*<button class="button button3" style="background-color: #4CAF50; border-color:#4CAF50; border-radius:5%;">@Html.ActionLink("Add Submission", "viewassignment", new { courseid = Model.courseId }, new { Style = "color:Black; text-decoration:none;" })</button>*@
+                                                                <input type="hidden" id="hidText" name="hidText" />
+
+                                                                @*<input type="hidden" name="ProjectName" id="btnsubmit" value="Next" class="btn btn btn-success" style="background-color:#5DC560" />*@
+                                                                <input type="submit" class="btn btn-success" style="float:right" value="Send" />
+
+
+                                                            </div>
+                                                            
+                                                        </div>
+
+                                                    </div>
+                                                    </div>
+                                                </form>
+                                                    }
+                                                </div>
+                                        </div>
+                           
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+
+    }
+
+    <script>
+        $(function () {
+            $("form").submit(function () {
+                var selTypeText = $("#ddCourseId option:selected").text();
+                $("#hidText").val(selTypeText);
+            });
+        });
+    </script>
+

@@ -1,0 +1,118 @@
+﻿@model IEnumerable<digital_School.ViewModel.ViewStatus>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    @{
+        ViewBag.Title = "viewArticle";
+        Layout = "~/Areas/SuperAdmin/Views/Shared/_Layout.cshtml";
+    }
+
+</head>
+<body id="page-top">
+
+
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+
+
+
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container" style="background-color:white ; width:80% ;margin-top:50px;margin-right:80px;">
+
+            <!-- Page Heading -->
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Article</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="MyTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>UserName</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+
+                                </tr>
+
+
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Clientarticle.CreatedDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.CreateDate.UserName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Article_Typename.Article_Typename)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.statustype.statustype)
+                                        </td>
+
+                                        <td>
+                                            @*@Html.ActionLink("Detail", "", new { id = item.CreateDate.UserId }) |
+                                                @Html.ActionLink("Delete", "", new { id = item.CreateDate.UserId })*@
+                                            <button type="submit" name="SubmitButton" value="2" class="btn btn-sm btn-success">@Html.ActionLink("Detail", "ApproveArticle", new { id = item.schoolarticle.ArticleId })</button>
+                                            @*<button type="submit" name="SubmitButton" value="3" class="btn btn-sm btn-danger">Reject</button>*@
+                                        </td>
+
+
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+    <!-- Footer -->
+    <!-- End of Footer -->
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<digital_School.ViewModel.StudentMarksModel>
+
+<div class="container">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <td>Total Marks</td>
+                <th>Marks Obtained</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+
+
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @item.CourseName
+                </td>
+                <td>
+                    @item.TotalMarks
+                </td>
+                <td>
+                    @item.MarksObtained
+                </td>
+                <td>
+                    @item.Percentage
+                </td>
+            </tr>
+        }
+    </table>
+</div>

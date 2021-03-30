@@ -1,0 +1,261 @@
+﻿.name {
+    color: #AFA939;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.type, .email {
+    display: block;
+    line-height: 1;
+    color: black;
+    font-weight: normal;
+}
+
+.email {
+    color: #ACACAC;
+    line-height: 0.6;
+}
+
+.date {
+    color: #ACACAC;
+}
+
+.user-image {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+}
+
+.rating {
+    background-color: #FCFCFC;
+}
+
+
+.rating-circle {
+    margin: 20px;
+    margin-bottom: 15px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    position: relative;
+}
+
+.dot, .dot-empty {
+    height: 12px;
+    width: 12px;
+    background-color: #AFA939;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-empty {
+    background-color: #ddd;
+}
+
+.head-small {
+    text-align: left;
+    font-size: 15px;
+    color: black;
+}
+
+.table th, .table td {
+    border: none !important;
+    padding: 0;
+}
+
+.table tr:nth-child(odd) > td {
+    background-color: #fff;
+}
+
+.table tr:nth-child(even) > td {
+    background-color: #fcfcfc;
+}
+
+.pagination > li > a {
+    color: #222831 !important;
+    border: 1px solid #ced4da;
+    padding: 5px 7px 5px 7px;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover,
+.pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #AFA939 !important;
+    border-color: #AFA939 !important;
+    color: #fff !important;
+}
+
+.sub-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px !important;
+}
+
+    textarea:focus {
+        border: 1px solid grey!important;
+    }
+
+.modal-title, #ratehead {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.search-bar {
+    width: 100%;
+}
+
+    .search-bar input[type=text] {
+        height: 35px;
+        border-radius: 4px 0px 0px 4px;
+        border: 1px solid #CED4DA;
+        padding: 0px 10px;
+        font-size: 14px;
+        width: 85%;
+    }
+
+        .search-bar input[type=text]:focus {
+            border: 1px solid #a2a7ab;
+            outline: none;
+        }
+
+    .search-bar button {
+        height: 35px;
+        border: none;
+        background-color: #B7B7B7;
+        border-radius: 0 4px 4px 0px;
+        color: #fff;
+        width: 15%;
+        cursor: pointer;
+    }
+
+        .search-bar button:hover {
+            background-color: #888888;
+        }
+
+        .search-bar button:focus {
+            outline: none;
+        }
+
+.close-modal-sm {
+    background-color: #E82F2F;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    font-size: 12px;
+    padding: 1px 0 0 1px;
+}
+
+    .close-modal-sm:hover {
+        background-color: #FF7E7E;
+    }
+
+    .close-modal-sm:focus {
+        outline: none;
+    }
+
+
+
+    /* success animation */
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 0 auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}
+
+
+.rate {
+    float: left;
+}
+
+    .rate:not(:checked) > input {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .rate:not(:checked) > label {
+        float: right;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 25px;
+        color: #ccc;
+    }
+
+        .rate:not(:checked) > label:before {
+            content: '\25CF';
+        }
+
+    .rate > input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+    }
+
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }

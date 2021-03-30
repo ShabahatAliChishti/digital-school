@@ -1,0 +1,500 @@
+﻿@model digital_School.ViewModel.tbl_LoginTableValidation
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Styles{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/e1303a18ed.js" crossorigin="anonymous"></script>
+}
+@section ValidateFields{
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+    @*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
+    @*<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>*@
+
+
+    <script>
+
+
+        function RegisterClient(evt) {
+            evt.preventDefault();
+            if (client_Error == true) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+    </script>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .errormessage {
+            color: red !important;
+            font-size: 13px !important;
+            float: right;
+        }
+
+        .errspan {
+            float: right;
+            margin-right: 8px;
+            margin-top: -32px;
+            position: relative;
+            z-index: 2;
+            color: red;
+            cursor: pointer;
+            display: none;
+        }
+
+        .fp-link u {
+            color: #AFA939;
+        }
+
+
+        .validationerror {
+            border: 0.083em solid red;
+        }
+
+        input.input-validation-error {
+            border: 0.083em solid red;
+        }
+
+        select.input-validation-error {
+            border: 0.083em solid red;
+        }
+
+        select.input-validation-error {
+            border: 0.083em solid red;
+        }
+    </style>
+}
+
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/Content/images/bg_1.jpg')" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+                <h1 class="mb-3 bread">Login</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="@Url.Action("Index","Home")">Home <i class="ion-ios-arrow-forward"></i></a></span><span>Login <i class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb mt-5 mb-5">
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 pt-5 pb-5 login-form" style="background-color:#F8F9FA; float: none; margin: 0 auto;">
+
+                    <div class="form-group p-0 mb-3 mt-3" style="text-align: center">
+                        <h1 class="head">USER LOGIN</h1>
+                    </div>
+                    <div class="form-group p-0 mb-3">
+                        <label>Email ID</label>
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "custom-control", @placeholder = "enter your email address", @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "errormessage" })
+
+                        @* <input type="password" class="custom-control" name="email" placeholder="enter your email address" />*@
+                    </div>
+                    <div class="form-group p-0 mb-3">
+                        <label>Password</label>
+                        <div style="width: 100%; overflow: hidden">
+                            <div class="float-left" style="width: 90%">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @type = "password", @class = "custom-control", @placeholder = "enter your password", @autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "errormessage" })
+
+                                @*<input type="password" class="custom-control pass" name="password" placeholder="enter your password" id="password" />*@
+                            </div>
+                            <div class="float-left" style="width: 10%">
+                                <button id="toggle" class="togglebtn inp" type="button" onclick="Toggle_Password()"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group p-0 mb-4" style=" overflow hidden
+                         ">
+
+                        <a onclick="ShowModel()" class="float-right fp-link"><u>Forgot Password</u></a>
+                    </div>
+                    <div class="form-group p-0 mb-3">
+                        <button class="login-button" type="submit">Login</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    }
+    <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Reset Your Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body m-3" id="step1">
+                    <p>Step 1: Enter your email to receive your reset code</p>
+                    <input type="text" id="email" name="forgotemail" class="custom-control" placeholder="enter your email address" />
+                    <label class="errormessage" id="emailerror"></label>
+
+                    @Html.ValidationMessage("forgotemail", "invalid email address", new { @class = "errormessage" })
+                </div>
+                <div class="modal-body m-3" id="step2">
+                    <p>Step 2: Enter the code in the following field:</p>
+                    <input type="text" id="code" name="code" class="custom-control" placeholder="enter code here" />
+                    @Html.ValidationMessage("code", "invalid code", new { @class = "errormessage" })
+                </div>
+                <div class="modal-body m-3" id="step3" style="display: none">
+                    <p>Step 3: Enter your new password </p>
+                    <input type="text" id="password" class="custom-control" placeholder="enter password" />
+                    <label class="errormessage" id="savemessage"></label>
+                    @Html.ValidationMessage("password", "length must be greater than 6", new { @class = "errormessage" })
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="close" data-dismiss="modal" onclick="fp_View1()">Close</button>
+                    <button type="submit" class="btn btn-secondary" name="btn" value="send" id="resend">Resend Code</button>
+                    <button type="submit" class="btn btn-primary" name="btn" value="send" id="sendcode" onclick="VerifyEmail()">Send Code</button>
+                    <button type="submit" class="btn btn-primary" name="btn" value="confirm" id="matchcode" onclick="VerifyCode()">Confirm code</button>
+                    <button type="button" class="btn btn-primary" name="btn" value="save" id="savechanges" onclick="SavePassword()">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+        function fp_View2(btnClicked) {
+        var $form = $(btnClicked).parents('form');
+        $.ajax({
+            type: "POST",
+            url: $form.attr('action'),
+            // data: $('#client').serialize() + '&' + encodeURIComponent(btnClicked.name15) + '=' + encodeURIComponent(btnClicked.value),
+            data: $form.serialize() + '&' + encodeURIComponent("btn") + '=' + encodeURIComponent("send"),
+
+            error: function (xhr, status, error) {
+
+            },
+            dataType:'text',
+            success: function (response) {
+                 var emailerror = document.getElementById("emailerror");
+                var email = document.getElementById("email");
+              //  var a = '@Session["popup"]'.toString();
+                @{
+                    var a = Session["popup"];
+                }
+                var a = '@Session["popup"]';
+
+                if (a==="1"){
+
+                    document.getElementById("step1").style.display = "none";
+                    document.getElementById("step2").style.display = "block";
+                    document.getElementById("sendcode").style.display = "none";
+                    document.getElementById("matchcode").style.display = "block";
+                    document.getElementById("close").style.display = "none";
+                    document.getElementById("resend").style.display = "block";
+                    $('#email').removeClass("validationerror");
+                    emailerror.innerText = "";
+                    //location.reload();
+                    @*@{
+                        Session["popup"]="0";
+                    }*@
+
+
+                } else{
+
+
+                    $('#email').addClass('validationerror');
+                    emailerror.innerText = "invalid email address";
+                }
+
+            }
+        });
+         return false;
+    }
+
+
+
+
+    $(function () {
+        ScrollWindow();
+    });
+
+
+    function ScrollWindow() {
+        $("html, body").animate({ scrollTop: 650 }, 600);
+    }
+
+    var basicinfo = document.getElementById("Section-1");
+    var upimage = document.getElementById("Section-2");
+
+    function fp_View1() {
+            document.getElementById("step1").style.display = "block";
+            document.getElementById("step2").style.display = "none";
+            document.getElementById("sendcode").style.display = "block";
+            document.getElementById("matchcode").style.display = "none";
+            document.getElementById("close").style.display = "block";
+            document.getElementById("resend").style.display = "none";
+    }
+
+    @*function fp_View2() {
+
+        var a = '@Session["popup"]';
+        if (a == 1) {
+            document.getElementById("step1").style.display = "none";
+            document.getElementById("step2").style.display = "block";
+            document.getElementById("sendcode").style.display = "none";
+            document.getElementById("matchcode").style.display = "block";
+            document.getElementById("close").style.display = "none";
+            document.getElementById("resend").style.display = "block";
+        }
+    }*@
+
+    function fp_View3() {
+        var a = '@Session["popup"]';
+        if (a == "2") {
+            document.getElementById("step2").style.display = "none";
+            document.getElementById("step3").style.display = "block";
+            document.getElementById("matchcode").style.display = "none";
+            document.getElementById("savechanges").style.display = "block";
+            document.getElementById("close").style.display = "block";
+            document.getElementById("resend").style.display = "none";
+        }
+    }
+
+    function Toggle_Password() {
+        var temp;
+        temp = document.getElementById("Password");
+        if (temp.type == "password") {
+            temp.type = "text";
+            document.getElementById("toggle").style.backgroundColor = "#e0e0e0";
+        } else {
+            temp.type = "password";
+            document.getElementById("toggle").style.backgroundColor = "transparent";
+        }
+    }
+
+</script>
+
+@section scripts
+{
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @* Popup Forgot Password *@
+    <script type="text/javascript">
+        var ShowModel = function () {
+
+
+            $("#exampleModalCenter").modal('show');
+            $("#step1").show();
+            $("#close").show();
+            $("#sendcode").show();
+            $("#step2").hide();
+            $("#step3").hide();
+            $("#resend").hide();
+            $("#matchcode").hide();
+            $("#savechanges").hide();
+
+        }
+
+        var VerifyEmail = function () {
+
+
+
+            var emailId = $("#email").val();
+
+            $.ajax({
+
+                type: "POST",
+                datatype:"text",
+                url: "/accounts/verifyfp_email",
+                data: { email: emailId },
+                success: function (data) {
+                    var result = $.trim(data);
+                    if (result === "1") {
+                        $("#exampleModalCenter").modal('show');
+                        $("#step2").show();
+                        $("#resend").show();
+                        $("#matchcode").show();
+                        $("#step1").hide();
+                        $("#step3").hide();
+                        $("#close").hide();
+                        $("#sendcode").hide();
+                        $("#savechanges").hide();
+                        $('#email').removeClass('validationerror');
+                    } else if (result === "0") {
+                        $('#email').addClass('validationerror');
+                        $('#emailerror').innerText("invalid email address");
+
+                    }
+                    //$("#ApproveRequest").modal("hide");
+                    //$("#row_" + empId).hide();
+
+                }
+
+            })
+
+        }
+
+         var VerifyCode = function () {
+           var code = $("#code").val();
+
+            $.ajax({
+
+                type: "POST",
+                datatype:"text",
+                url: "/accounts/verifyfp_code",
+                data: { code: code },
+                success: function (data) {
+                    var result = $.trim(data);
+                    if (result === "1") {
+                        $("#exampleModalCenter").modal('show');
+                        $("#step3").show();
+                        $("#close").show();
+                        $("#savechanges").show();
+                        $("#step1").hide();
+                        $("#step2").hide();
+                        $("#resend").hide();
+                        $("#sendcode").hide();
+                        $("#matchcode").hide();
+                        $('#code').removeClass('validationerror');
+                    } else if (result === "0") {
+                        $('#code').addClass('validationerror');
+                     }
+
+                }
+
+            })
+
+        }
+
+         var SavePassword = function () {
+           var password = $("#password").val();
+           var emailId = $("#email").val();
+            $.ajax({
+
+                type: "POST",
+                datatype:"text",
+                url: "/accounts/savefp_password",
+                data: { password: password,emailId: emailId},
+                success: function (data) {
+                    var result = $.trim(data);
+                    if (result === "1") {
+                        alert("save successfuly");
+                        $("#exampleModalCenter").modal('hide');
+                        //$("#step3").show();
+                        //$("#close").show();
+                        //$("#savechanges").show();
+                        //$("#step1").hide();
+                        //$("#step2").hide();
+                        //$("#resend").hide();
+                        //$("#sendcode").hide();
+                        //$("#matchcode").hide();
+
+                       $('#password').removeClass('validationerror');
+                        //$('#savemessage').innerText = "save successfully";
+
+                    } else if (result === "0") {
+                        $('#password').addClass('validationerror');
+                     }
+
+                }
+
+            })
+
+        }
+
+    </script>
+    @* Popup Delete *@
+    <script type="text/javascript">
+        var ConfirmDelete = function (EmployeeId) {
+
+            $("#hiddenid").val(EmployeeId);
+            $("#DeleteRequest").modal('show');
+
+        }
+
+        var DeleteAttorney = function () {
+
+
+
+            var empId = $("#hiddenid").val();
+
+            $.ajax({
+
+                type: "POST",
+                url: "/accounts/delete_attorney",
+                data: { EmployeeId: empId },
+                success: function (result) {
+
+                    $("#DeleteRequest").modal("hide");
+                    $("#row_" + empId).remove();
+
+                }
+
+            })
+
+        }
+    </script>
+    @* Popup Attorney Details *@
+    <script>
+        var TeamDetailPostBackURL = '/accounts/attorney_details';
+        $(function () {
+            $(".table-button").click(function () {
+                debugger;
+                var $buttonClicked = $(this);
+                var id = $buttonClicked.attr('data-id');
+                var options = { "backdrop": "static", keyboard: true };
+                $.ajax({
+                    type: "GET",
+                    url: TeamDetailPostBackURL,
+                    contentType: "application/json; charset=utf-8",
+                    data: { "Id": id },
+                    datatype: "json",
+                    success: function (data) {
+                        debugger;
+                        $('#myModalContent').html(data);
+                        $('#myModal').modal(options);
+                        $('#myModal').modal('show');
+
+                    },
+                    error: function () {
+                        alert("Dynamic content load failed.");
+                    }
+                });
+            });
+            //$("#closebtn").on('click',function(){
+            //    $('#myModal').modal('hide');
+
+            $("#closbtn").click(function () {
+                $('#myModal').modal('hide');
+            });
+        });
+
+    </script>
+
+}

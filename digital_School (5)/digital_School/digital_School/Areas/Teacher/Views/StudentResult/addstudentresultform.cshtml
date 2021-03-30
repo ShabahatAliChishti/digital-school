@@ -1,0 +1,135 @@
+﻿@model digital_School.Models.StudentResult
+<head>
+@{
+    ViewBag.Title = "addstudentresultform";
+    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+}
+   
+</head>
+
+<!-- Body -->
+<body>
+    <!-- Registrations page-->
+    <div class="content-wrapper" style="margin-top:50px;">
+        <div class="card card-info">
+            <div class="card-header ">
+                <h3 class="card-title ">Student Result Form</h3>
+            </div>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <form class="form-horizontal">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-1"></div>
+                            <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Student Registeration No</label>
+                            <div class="col-md-7 col-lg-8">
+                                @Html.DropDownList("Select Registeration No", (IEnumerable<SelectListItem>)ViewData["StudentRegno"], "Select Registeration No", new
+                   { @*style = "width:270px; height:40px;margin-left:10px;border:1px solid #d1d3e2;"*@ 
+                               @class = "form-control"
+                   })
+                                @Html.ValidationMessageFor(x => Model.StudentId, "", new { @class = "text-danger" })
+
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-1"></div>
+                            <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Name</label>
+                            <div class="col-md-7 col-lg-8">
+                                <input type="text" id="Name" class="form-control" name="Name" readonly="readonly" />
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-1"></div>
+                            <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Email</label>
+                            <div class="col-md-7 col-lg-8">
+                                <input type="text" id="Email" class="form-control" name="Email" readonly="readonly" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-1"></div>
+                            <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Course</label>
+                            <div class="col-md-7 col-lg-8">
+                                @Html.DropDownList("Select Course", (IEnumerable<SelectListItem>)ViewData["Courses"], "Select Course", new
+                   { @*style = "width:270px; height:40px;margin-left:10px;border:1px solid #d1d3e2;"*@ @class = "form-control"
+                   })
+                                @Html.ValidationMessageFor(x => Model.CourseId, "", new { @class = "text-danger" })
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-1"></div>
+                            <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Class</label>
+                            <div class="col-md-7 col-lg-8">
+                                @Html.DropDownList("Select Class", (IEnumerable<SelectListItem>)ViewData["Classes"], "Select Class", new
+                   { @*style = "width:270px; height:40px;margin-left:10px;border:1px solid #d1d3e2;"*@@class = "form-control"
+                   })
+                                @Html.ValidationMessageFor(x => Model.ClassId, "", new { @class = "text-danger" })
+
+                            </div>
+
+                        </div>
+
+                        @*<div class="form-group">
+                            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextAreaFor(model => model.Description, 10, 40, htmlAttributes: new { style = "width: 100%; max-width: 100%;" })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                        <div class="form-group row">
+                            <div class="col-md-1"></div>
+                            <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Marks Obtained</label>
+                            <div class="col-md-7 col-lg-8">
+                                @Html.EditorFor(model => model.MarksObtained, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Marks Obtained") } })
+                                @Html.ValidationMessageFor(model => model.MarksObtained, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-6">
+                                    <button type="submit" class="btn btn-info float-right">ADD</button>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-6">
+                                    <button type="submit" class="btn btn-default float-left ">Cancel</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.card-footer -->
+                </form>
+
+            }
+        </div>
+                                    </div>
+    
+                <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+                <script src="~/Scripts/jquery.validate.min.js"></script>
+                <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+                @if (ViewBag.Message != null)
+            {
+                    <script type="text/javascript">
+
+         window.onload = function () {
+          alert("@ViewBag.Message");
+          };
+                    </script>
+
+                }
+
+
+</body>
+
+

@@ -1,0 +1,150 @@
+﻿@model digital_School.Models.Lecture
+@{
+    ViewBag.Title = "updateLecture";
+    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper" style="margin-top:50px;">
+    <div class="card card-info">
+        <div class="card-header ">
+            <h3 class="card-title ">Lecture</h3>
+        </div>
+
+        @using (Html.BeginForm("updateLacture", "Lecture", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group row">
+                    <div class="col-md-1"></div>
+                    <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">TestFile</label>
+                    <div class="col-md-7 col-lg-8">
+
+                        @Html.HiddenFor(model => model.LectureUrl)
+                        <input type="file" name="file" id="file" />
+
+                    </div>
+
+                </div>
+
+
+
+                    @*<div class="form-group row">
+                        <div class="col-md-6 col-md-offset-6 col-sm-4 col-sm-offset-5 col-5 col-xs-offset-4 "></div>
+
+                        <div class="">
+                            <a href="~/FrontEnd/File_upload/Lecture/@Session["url"].ToString()" />
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group row">
+                        <div class="col-md-6 col-md-offset-6 col-sm-4 col-sm-offset-5 col-5 col-xs-offset-4"></div>
+                        <input type="file" id="LectureUrl" style="display:none" name="LectureUrl" />
+                        <div class="">
+                            <button class="btn btn-success" id="OpenfileUpload" type="button">
+                                <i class="fa fa-fw fa-camera"></i>
+                                <span>Change Photo</span>
+                            </button>
+                        </div>
+                    </div>*@
+
+
+
+                    @Html.HiddenFor(model => model.CourseId)
+                    @Html.HiddenFor(model => model.ClassId)
+                    @Html.HiddenFor(model => model.SchoolId)
+                    @Html.HiddenFor(model => model.CreatedDate)
+                    @Html.HiddenFor(model => model.UserId)
+                    @Html.HiddenFor(model => model.LectureId)
+
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.ClassId, "ClassId", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("ClassId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ClassId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                    <form class="form-horizontal">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <div class="col-md-1"></div>
+                                <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Lecture Name</label>
+                                <div class="col-md-7 col-lg-8">
+                                    @Html.EditorFor(model => model.Lecturename, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Lecture Name") } })
+                                    @Html.ValidationMessageFor(model => model.Lecturename, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="form-group row">
+                                <div class="col-md-1"></div>
+                                <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Lecture Description</label>
+                                <div class="col-md-7 col-lg-8">
+                                    @Html.TextAreaFor(model => model.Lecture_Description, 8, 40, htmlAttributes: new { style = "width: 100%; max-width: 100%;", placeholder = @Html.DisplayName("Enter Description") })
+                                    @Html.ValidationMessageFor(model => model.Lecture_Description, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <div class="col-md-1"></div>
+                                <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Video URL</label>
+                                <div class="col-md-7 col-lg-8">
+                                    @Html.EditorFor(model => model.VideoLink, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Vedio URL") } })
+                                    @Html.ValidationMessageFor(model => model.VideoLink, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-6">
+                                        <button type="submit" class="btn btn-info float-right">Update</button>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-6">
+                                        <button type="submit" class="btn btn-default float-left ">Cancel</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /.card-footer -->
+                    </form>
+
+                    }
+                </div>
+
+
+
+        </div>
+
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+            </script>
+
+        }

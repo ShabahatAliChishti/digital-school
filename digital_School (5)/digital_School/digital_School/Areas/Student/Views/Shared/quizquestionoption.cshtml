@@ -1,0 +1,59 @@
+﻿
+@model digital_School.ViewModel.tbl_onlinetestAnswer
+
+
+<style type="text/css">
+    fieldset {
+        font-family: sans-serif;
+        border: 3px solid #1F497D;
+        background-color: #ddd;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+        fieldset legend {
+            background: #1F497D;
+            color: #fff;
+            padding: 5px 10px 10px 20px;
+            font-size: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 0 5px #ddd;
+            margin-left: 1px;
+            margin-right: 10px;
+        }
+
+    .na {
+        margin-right: 10px;
+    }
+</style>
+
+@{ var questionId = Model.QuestionId;}
+<input type="hidden" name="QuestionId" id="txtQuestionId" value="@questionId" />
+<fieldset>
+    <legend>@Model.Questionname</legend>
+    <table style="width:100%" class="table table-condensed" id="tblQuestionOption">
+        @foreach (var item in Model.ListOfQuizOption)
+        {
+            <tr>
+                <td>
+                    @Html.RadioButtonFor(model => model.OptionId, item.OptionName, new { @class = "na" })@item.OptionName
+                </td>
+            </tr>
+
+        }
+        <tr>
+            <td>
+                @if (Model.IsLast)
+                {
+                    <input type="button" name="Save" value="Save" class="btn btn-success" id="btnSave" onclick="SaveCandidateAnswer()" />
+
+                }
+                else
+                {
+                    <input type="button" name="next" value="next" class="btn btn-success" id="btnNext" onclick="LoadQuestion()" />
+
+                }
+            </td>
+        </tr>
+    </table>
+</fieldset>

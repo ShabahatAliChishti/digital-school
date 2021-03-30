@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f6b1382c710845888b8d0b58e44b0b63" Name="Diagram1">
+        <EntityTypeShape EntityType="Digital_SchoolModel.AdvisoryBoard" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Announcement" Width="1.5" PointX="3" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Answer" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Article" Width="1.5" PointX="6" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.ArticleComment" Width="1.5" PointX="8.25" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.ArticleType" Width="1.5" PointX="3.75" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.AssignmentResult" Width="1.5" PointX="11.25" PointY="41.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Bank" Width="1.5" PointX="9" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Blog" Width="1.5" PointX="0.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.BlogType" Width="1.5" PointX="1.5" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Catigory" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Certificate" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.CertificateType" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Client" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Client_SchoolComplain" Width="1.5" PointX="3" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.ClientCertificate" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.ClientMessage" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.ClientReply" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Collaboration" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Comment" Width="1.5" PointX="3" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Course" Width="1.5" PointX="9" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.CourseAssignToTeacher" Width="1.5" PointX="14.25" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Day" Width="1.5" PointX="15" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Department" Width="1.5" PointX="10.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Discussion" Width="1.5" PointX="11.25" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Donar" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Event" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Exam" Width="1.5" PointX="15" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.HelpCategory" Width="1.5" PointX="11.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Helpe" Width="1.5" PointX="14" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.KidsStoryType" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.KidTalent" Width="1.5" PointX="6" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Lecture" Width="1.5" PointX="14.25" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.loginTable" Width="1.5" PointX="3" PointY="63.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.ManualTest" Width="1.5" PointX="14.25" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Message" Width="1.5" PointX="11.25" PointY="63.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.OnlineTest" Width="1.5" PointX="11.25" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.OnlineTestAnswer" Width="1.5" PointX="16.5" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.OnlineTestQuestionOption" Width="1.5" PointX="13.5" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.OnlineTestResult" Width="1.5" PointX="3" PointY="66.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Option" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.PaymentConfirmation" Width="1.5" PointX="11.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Post" Width="1.5" PointX="19.5" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Question" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Reply" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.ResultClient" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.RoleName" Width="1.5" PointX="0.75" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.School" Width="1.5" PointX="12" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.SchoolAssignment" Width="1.5" PointX="17.25" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Section" Width="1.5" PointX="15" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Status" Width="1.5" PointX="3.75" PointY="33.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Student" Width="1.5" PointX="9" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.StudentComplain" Width="1.5" PointX="17.25" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.StudentHistory" Width="1.5" PointX="11.25" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.StudentMaster" Width="1.5" PointX="17.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.StudentResult" Width="1.5" PointX="17.25" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.SubmitAssignment" Width="1.5" PointX="19.5" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.SubmitManualTest" Width="1.5" PointX="19.5" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Subscriber" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.SuperAdmin" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Tbl_Class" Width="1.5" PointX="6.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Teacher" Width="1.5" PointX="12" PointY="53.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.Team" Width="1.5" PointX="13" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.TechnicTip" Width="1.5" PointX="6" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.TimeTable" Width="1.5" PointX="17.25" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.TranscationType" Width="1.5" PointX="9" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.UserEnrollInCourse" Width="1.5" PointX="17.25" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.UserFeedback" Width="1.5" PointX="14.25" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.webadd" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.WebsiteReview" Width="1.5" PointX="15.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Announcement_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Answer_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Article_ArticleType" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Article_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Article_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_ArticleComments_Article" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_AssignmentResult_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_AssignmentResult_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_AssignmentResult_SchoolAssignments" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_AssignmentResult_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_AssignmentResult_SubmitAssignment" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_PaymentConfirmation_Bank" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Blog_BlogType" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Comments_Blog" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Question_Catigory" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Certificate_CertificateType" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Certificate_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_ClientCertificate_CertificateType" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Client_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_PaymentConfirmation_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_ResultClient_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Client_SchoolComplain_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Comments_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Course_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Course_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_CourseAssignToTeacher_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Discussion_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Lecture_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Messages_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_OnlineTest_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Post_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_SchoolAssignments_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_TestFile_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_TimeTable_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_UserEnrollInCourse_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_UserFeedback_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_CourseAssignToTeacher_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_CourseAssignToTeacher_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_CourseAssignToTeacher_Teacher" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_TimeTable_Day" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Team_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Discussion_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Discussion_Discussion" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Discussion_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Discussion_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Post_Discussion" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_StudentMaster_Exam" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_StudentResult_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Helpe_HelpCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_KidTalent_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_KidTalent_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Lecture_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Lecture_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_loginTable_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_ManualTest_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_ManualTest_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_ManualTest_Teacher" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_SubmitManualTest_ManualTest" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_OnlineTest_OnlineTest" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_OnlineTest_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_OnlineTestAnswers_OnlineTest" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_OnlineTestQuestionOptions_OnlineTest" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Questions_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_OnlineTestAnswers_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_OnlineTestResults_OnlineTestResults" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_OnlineTestResults_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Options_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_PaymentConfirmation_TranscationType" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Post_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Post_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_ResultClient_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_TechnicTip_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_UserEnrollInCourse_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_UserFeedback_RoleName" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_SchoolAssignments_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Student_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_StudentComplain_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_StudentResult_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_SubmitAssignment_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_SubmitManualTest_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Table_1_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Teacher_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_UserFeedback_School" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_SchoolAssignments_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_SubmitAssignment_SchoolAssignments" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_StudentResult_Section" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_TimeTable_Section" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_TechnicTip_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_UserEnrollInCourse_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Student_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_StudentComplain_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_StudentHistory_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_StudentResult_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_Teacher_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_TimeTable_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_UserFeedback_UserFeedback" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Digital_SchoolModel.KidsStory" Width="1.5" PointX="6" PointY="17.375" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_KidsStory_KidsStoryType" />
+        <AssociationConnector Association="Digital_SchoolModel.FK_KidsStory_Status" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

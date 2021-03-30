@@ -1,0 +1,199 @@
+﻿@model IEnumerable<digital_School.Models.Event>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    @{
+        ViewBag.Title = "viewsevent";
+        Layout = "~/Areas/SuperAdmin/Views/Shared/_Layout.cshtml";
+    }
+
+ </head>
+<body id="page-top">
+
+
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <input type="hidden" id="hiddenSchoolId" />
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Delete Event</h3>
+                        <button type="button" class="close " data-dismiss="modal">&times;</button>
+
+                    </div>
+
+
+                    <div class="modal-body">
+                        <h4>Are You sure? you want to delete this</h4>
+
+
+
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                        <a href="#" class="btn btn-success" onclick="DeleteSchool()">Conform</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container" style="background-color:white ; width:80% ;margin-top:50px;margin-right:80px;">
+
+            <!-- Page Heading -->
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Event</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="MyTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Venue</th>
+                                    <th>Description</th>
+                                    <th>Image</th>
+                                    <th>Video</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+
+
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr id="row_@item.EventId">
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Title)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Event_Venue)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Event_Description)
+                                        </td>
+                                        <td>
+                                            <img src="@Url.Content(item.Event_VenueImage)" width="150" height="150" />
+                                        </td>
+
+                                        <td>
+                                            <iframe width="530" height="400" src="@item.Event_VenueVideo" frameborder="0" allowfullscreen></iframe>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Event_Start_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Event_End_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Event_Start_Time)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelitem => item.Event_End_Time)
+                                        </td>
+
+                                        <td>
+                                            <a href="#" class="btn btn-danger" onclick="ConformDelete(@item.EventId)">Delete</a>
+                                            <a href="@Url.Action("updateevent", new { id = item.EventId, item.Title })" class="btn btn-success">Edit</a>
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+    <!-- Footer -->
+    <!-- End of Footer -->
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <script>
+
+
+    $(document).ready(function () {
+
+    })
+
+
+
+    var ConformDelete = function (eventId) {
+
+        debugger
+        $("#hiddenSchoolId").val(eventId);
+        $("#myModal").modal('show');
+
+    }
+
+    var DeleteSchool = function () {
+
+        var empId = $("#hiddenSchoolId").val();
+        debugger
+        $.ajax({
+
+            type: 'POST',
+
+            url: '@Url.Action("DeleteEvent","Event", new { Area = "Superadmin" })',
+            data: { eventID: empId },
+            success: function (resul) {
+                $("#myModal").modal('hide');
+                $("#row_" + empId).remove();
+
+
+            }
+        })
+    }
+
+    </script>
+
+</body>
+
+
+</html>*

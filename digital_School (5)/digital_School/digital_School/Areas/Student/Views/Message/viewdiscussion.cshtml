@@ -1,0 +1,98 @@
+﻿@model digital_School.ViewModel.tblEnrollStudentInCourseValidation
+@{
+    ViewBag.Title = "viewdiscussion";
+    Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
+}
+
+
+<div ng-controller="headerCtrl">
+    <div class="container" style="background-color:white ; width:80% ">
+        <h2 style="color:black; text-align:center"><b>Select Your Course</b></h2>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <section>
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="form-horizontal">
+                                        <hr />
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        @Html.Label("Course", htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-6 col-sm-8 col-12">
+
+                                            @Html.DropDownListFor(model => model.courseId, (SelectList)ViewBag.course, "Select Course", new { required = "required", @class = "form-control", @id = "ddCourseId" })
+
+                                            @Html.ValidationMessageFor(x => Model.courseId, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*<div class="form-group">
+                                            @Html.Hidden("RedirectTo", @Url.Action("viewassignment", "Home", new { Area = "Student" }))
+
+                                        </div>*@
+
+
+                                    <div class="form-group ">
+                                        <div class="col-md-4">
+
+                                            @*<button class="button button3" style="background-color: #4CAF50; border-color:#4CAF50; border-radius:5%;">@Html.ActionLink("Add Submission", "viewassignment", new { courseid = Model.courseId }, new { Style = "color:Black; text-decoration:none;" })</button>*@
+
+                                            <input type="submit" id="btnsubmit" value="Next" class="btn btn btn-success" style="background-color:#5DC560" />
+
+
+                                        </div>
+                                    </div>
+
+                                }
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+    </script>
+
+}
+<script>
+    $('#btnsubmit').click(function () {
+        var url = $("#RedirectTo").val();
+
+        var deviceid = $('#ddCourseId').val();
+        //alert(deviceid);  //Comment it after testing
+
+        $.ajax({
+            type: 'GET',
+            data: { courseid: deviceid },
+            dataType: "json",
+            @*url: '@Url.Action("viewassignment", "Home", new { Area = "Student"})',*@
+            success: function (result) {
+                //do something with the result
+                //windows.location.href = url;
+                alert("Successfully Gone!");
+            }
+        });
+    })
+</script>

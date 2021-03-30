@@ -1,0 +1,217 @@
+﻿@model  digital_School.ViewModel.tbl_eventValidation
+
+@{
+    ViewBag.Title = "addEvent";
+    Layout = "~/Areas/SuperAdmin/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/FrontEnd/ckeditor/ckeditor.js"></script>
+
+
+<div class="content-wrapper" style="margin-top:50px;">
+    <div class="card card-info">
+        <div class="card-header ">
+            <h3 class="card-title ">Article Form</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        @using (Html.BeginForm("addEvent", "Event", FormMethod.Post, new { @id = "form", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            </div>
+
+            <form class="form-horizontal">
+                <div class="card-body">
+
+
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Title</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Titlle") } })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            @*<input type="email" class="form-control" id="inputEmail3" placeholder="Email">*@
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Image</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.TextBoxFor(model => model.UserImageFIle, new { @accept = "image/png,image/jpg,image/jpeg", type = "file", @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.UserImageFIle, "", new { @class = "text-danger" })
+
+                            @*<input type="password" class="form-control" id="inputPassword3" placeholder="Password">*@
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Venue</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.EditorFor(model => model.Event_Venue, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Event Venue") } })
+                            @Html.ValidationMessageFor(model => model.Event_Venue, "", new { @class = "text-danger" })
+                            @*<input type="email" class="form-control" id="inputEmail3" placeholder="Email">*@
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Vedio Url</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.EditorFor(model => model.Event_VenueVideo, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Vedio URL") } })
+                            @Html.ValidationMessageFor(model => model.Event_VenueVideo, "", new { @class = "text-danger" })
+
+                            @*<input type="email" class="form-control" id="inputEmail3" placeholder="Email">*@
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Start Time</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.EditorFor(model => model.Event_Start_Time, "{HH:mm tt}", new { htmlAttributes = new { @class = "form-control input-sm", @type = "time", id = "txtStartTime" } })
+                            @Html.ValidationMessageFor(model => model.Event_Start_Time, "", new { @class = "text-danger" })  
+                            @*<input type="email" class="form-control" id="inputEmail3" placeholder="Email">*@
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Start Time</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.EditorFor(model => model.Event_End_Time, "{HH:mm tt}", new { htmlAttributes = new { @class = "form-control input-sm", @type = "time", id = "txtEndTime" } })
+                            @Html.ValidationMessageFor(model => model.Event_End_Time, "", new { @class = "text-danger" })
+                            @*<input type="email" class="form-control" id="inputEmail3" placeholder="Email">*@
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Start Date</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.TextBoxFor(m => m.Event_Start_Date, "{MM/DD/YYYY}", new { @class = "form-control input-sm", type = "text", id = "StartDate" })
+                            @Html.ValidationMessageFor(m => m.Event_Start_Date, "", new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">End Date</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.TextBoxFor(m => m.Event_End_Date, "{MM/DD/YYYY}", new { @class = "form-control input-sm", type = "text", id = "EndDate" })
+                            @Html.ValidationMessageFor(m => m.Event_End_Date, "", new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+                        <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label"> Description</label>
+                        <div class="col-md-7 col-lg-8">
+                            @Html.TextAreaFor(model => model.Event_Description, 10, 40, htmlAttributes: new { @class = "form-control input-sm", style = "width: 100%; max-width: 100%;", placeholder = @Html.DisplayName("Enter Event Description") })
+                            @Html.ValidationMessageFor(model => model.Event_Description, "", new { @class = "text-danger" })
+
+                            @*<input type="password" class="form-control" id="inputPassword3" placeholder="Password">*@
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <button type="submit" class="btn btn-info float-right">ADD</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <button type="submit" class="btn btn-default float-left ">Cancel</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.card-footer -->
+            </form>
+        }
+    </div>
+
+
+</div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+         window.onload = function () {
+          alert("@ViewBag.Message");
+          };
+    </script>
+
+}
+
+
+
+<script>
+    $(function () {
+        $("#StartDate, #EndDate").datepicker();
+        $("#EndDate").change(function () {
+            var startDate = document.getElementById("StartDate").value;
+            var endDate = document.getElementById("EndDate").value;
+
+            if ((Date.parse(endDate) <= Date.parse(startDate))) {
+                alert("End date should be greater than Start date");
+                document.getElementById("EndDate").value = "";
+            }
+        });
+    });
+</script>
+<script>
+    $(function () {
+        $("#txtEndTime").change(function () {
+            var strStartTime = document.getElementById("txtStartTime").value;
+            var strEndTime = document.getElementById("txtEndTime").value;
+
+            var startTime = new Date().setHours(GetHours(strStartTime), GetMinutes(strStartTime), 0);
+            var endTime = new Date(startTime)
+            endTime = endTime.setHours(GetHours(strEndTime), GetMinutes(strEndTime), 0);
+            if (startTime >= endTime) {
+                alert("End Time should be greater than Start time");
+                document.getElementById("txtEndTime").value = ""
+            }
+            //if (startTime == endTime) {
+            //    alert("Start Time equals end time");
+            //}
+            //if (startTime < endTime) {
+            //    alert("Start Time is less than end time");
+            //}
+        });
+
+        function GetHours(d) {
+            var h = parseInt(d.split(':')[0]);
+            if (d.split(':')[1].split(' ')[1] == "PM") {
+                h = h + 12;
+            }
+            return h;
+        }
+        function GetMinutes(d) {
+            return parseInt(d.split(':')[1].split(' ')[0]);
+        }
+    });
+</script>

@@ -1,0 +1,188 @@
+﻿@model IEnumerable<digital_School.Models.Collaboration>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    @{
+        ViewBag.Title = "ViewCollaboration";
+        Layout = "~/Areas/SuperAdmin/Views/Shared/_Layout.cshtml";
+    }
+
+
+</head>
+<body id="page-top">
+
+
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <input type="hidden" id="hiddenSchoolId" />
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+             <h3 class="modal-title">Delete Collaboration</h3>
+                        <button type="button" class="close " data-dismiss="modal">&times;</button>
+
+                    </div>
+
+
+                    <div class="modal-body">
+                        <h4>Are You sure? you want to delete this</h4>
+
+
+
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                        <a href="#" class="btn btn-success" onclick="DeleteSchool()">Conform</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container" style="background-color:white ; width:80% ;margin-top:50px;margin-right:80px;">
+
+            <!-- Page Heading -->
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Collaboration</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="MyTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Title</th>
+                                    <th>Image</th>
+                                    <th> Description</th>
+
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+
+                                    <tr id="row_@item.CallobrationId">
+                                        <td>
+                                            @item.CallobrationName
+                                        </td>
+                                        <td>
+                                            @item.CallobrationTitle
+                                        </td>
+
+                                        <td> <img src="@Url.Content(item.Image)" width="150" height="150" /></td>
+
+                                        <td>
+                                            @item.Description
+                                        </td>
+
+
+                                        <td>
+                                            @*<button class="button button3" style="background-color: #5DC560; border-color:#5DC560; border-radius:5%;">@Html.ActionLink("Student Complain Reply", "virewComplainReply", new { id = item.complain_Id }, new { Style = "color:White; text-decoration:none;" })</button>*@
+                                            <a href="#" class="btn btn-danger" onclick="ConformDelete(@item.CallobrationId)">Delete</a>
+                                            <a href="@Url.Action("updateCollaboration", new { id = item.CallobrationId, item.CallobrationTitle })" class="btn btn-success">Edit</a>
+
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+    <!-- Footer -->
+    <!-- End of Footer -->
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+
+
+    <script>
+
+
+    $(document).ready(function () {
+
+    })
+
+
+
+    var ConformDelete = function (calloborId) {
+
+        debugger
+        $("#hiddenSchoolId").val(calloborId);
+        $("#myModal").modal('show');
+
+    }
+
+    var DeleteSchool = function () {
+
+        var empId = $("#hiddenSchoolId").val();
+        debugger
+        $.ajax({
+
+            type: 'POST',
+
+            url: '@Url.Action("DeleteCollaboration","collaboration", new { Area = "Superadmin" })',
+            data: { CalloborateID: empId },
+            success: function (resul) {
+                $("#myModal").modal('hide');
+                $("#row_" + empId).remove();
+
+
+            }
+        })
+    }
+
+    </script>
+
+
+
+
+
+</body>
+
+
+</html>*

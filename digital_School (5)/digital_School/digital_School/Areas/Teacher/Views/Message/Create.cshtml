@@ -1,0 +1,66 @@
+﻿@model digital_School.ViewModel.MessageReplyViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper" style="margin-top:50px;">
+    <div class="card card-info">
+        <div class="card-header ">
+            <h3 class="card-title ">New Message</h3>
+        </div>
+
+                @using (Html.BeginForm("PostMessage", "Message", FormMethod.Post, new { @id = "form-post-message", @class = "form-horizontal" }))
+                {
+                    
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                        <form class="form-horizontal">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-md-1"></div>
+                                    <label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Course</label>
+                                    <div class="col-md-7 col-lg-8">
+                                        @Html.DropDownListFor(x => Model.Message.courseId, (SelectList)ViewBag.course, "Select Course", new { required = "required", @class = "form-control", @id = "ddCourseId" })
+
+                                        @Html.ValidationMessageFor(x => Model.Message.courseId, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-1"></div>
+                                    <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Subject</label>
+                                    <div class="col-md-7 col-lg-8">
+                                        @Html.TextBoxFor(p => p.Message.Subject, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Message.Subject)
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-1"></div>
+                                    <label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Message</label>
+                                    <div class="col-md-7 col-lg-8">
+                                        @Html.TextAreaFor(p => p.Message.MessageToPost, new { @rows = 8, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Message.MessageToPost)
+                                    </div>
+                                </div>
+                                
+                          
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-6">
+                                        <input type="submit" class="btn btn btn-success" style="float:right" value="Post Message">
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-6">
+                                        <button type="submit" class="btn btn-default float-left ">Cancel</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- /.card-footer -->
+                        </form>
+                            }
+                    </div>
+        

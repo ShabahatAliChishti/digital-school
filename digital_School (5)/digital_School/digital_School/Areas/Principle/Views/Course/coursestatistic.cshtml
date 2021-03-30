@@ -1,0 +1,106 @@
+﻿@model digital_School.Models.CourseAssignToTeacher
+
+
+@{
+    Layout = "~/Areas/Principle/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="container">
+        <h2 style="text-align:center">Course Statistic </h2>
+        <div class="form-group">
+            <div class="col-md-12" style="margin-bottom: 5px;">
+                <label class="col-form-label-lg">Class</label>
+
+                @Html.DropDownList("ddlstudentname", (SelectList)ViewData["class_name"], "-Select Class-", new { @class = "form-control ", @id = "Class_Id" })
+
+
+            </div>
+        </div>
+        <label id="messageLabel" style="color: red; font-weight: normal; font-size: 20px;"></label>
+        <div id="UpdatePanel">
+        </div>
+    </div>
+}
+<div style="clear: ">
+
+
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script>
+        @if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+         window.onload = function () {
+          alert("@ViewBag.Message");
+          };
+</script>
+
+}
+
+    $(document).ready(function() {
+        //$("#CourseTable").hide();
+        $("#Class_Id").change(function () {
+            var Id = $("#Class_Id").val();
+            $("#messageLabel").text("");
+            var jsnFormatData = { Class_Id: Id };
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("CourseInfo", "Course", new { Area = "Principle" })',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function (dataa) {
+                var tab = $('<table id="CourseTable" class="table">
+                    ');
+                    var thead = $('
+                    <thead style="line-height: 30px; color: #ffffff; font-weight: normal; font-size: 16px;"></thead>');
+                    thead.append('
+                    <th style="text-align: center; border-right: 1px solid #ffffff;">Course Code</th>');
+                    thead.append('
+                    <th style="text-align: center; border-right: 1px solid #ffffff;">Course Title</th>');
+                    thead.append('
+                    <th style="text-align: center; border-right: 1px solid #ffffff;">Assign To</th>');
+
+                    thead.css('background-color', ' gray');
+                    tab.append(thead);
+
+                    var tablerow = false;
+                    $("#UpdatePanel").show();
+                    $.each(dataa, function (key2, value2) {
+                    var trow = $('
+                    <tr></tr>');
+                    var ass2 = value2.AssignTo;
+                    if (ass2 == null || ass2 === "") ass2 = 'Not Assigned Yet';
+                    trow.append('
+                    <td style="text-align: center; border-right: 1px solid #ffffff;">' + value2.Code + '</td>');
+                    trow.append('
+                    <td style="text-align: center; border-right: 1px solid #ffffff;">' + value2.courseName + '</td>');
+                    trow.append('
+                    <td style="text-align: center; border-right: 1px solid #ffffff;">' + ass2 + '</td>');
+                    tab.append(trow);
+                    tablerow = true;
+                    });
+
+                    $("tr:odd", tab).css('background-color', '#F5F5F5');
+                    $("tr:even", tab).css('background-color', '#EEEEEE');
+                    $("#UpdatePanel").html(tab);
+                    if (tablerow === false) {
+                    $("#UpdatePanel").hide();
+                    if(deptId !== 0)
+                    $("#messageLabel").text("No Courses are Available in this Class.");
+                    }
+                    }
+                    });
+                    return false;
+                    });
+                    });
+                    </script>

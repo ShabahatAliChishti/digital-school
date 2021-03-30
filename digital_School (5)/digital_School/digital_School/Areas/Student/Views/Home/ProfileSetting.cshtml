@@ -1,0 +1,224 @@
+﻿@model  digital_School.ViewModel.tbl_StudentValidation
+
+@{
+    ViewBag.Title = "ProfileSetting";
+    Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+@*<link href="~/Content/StyleSheet1.css" rel="stylesheet" />*@
+@*<script src="https://kit.fontawesome.com/e1303a18ed.js" crossorigin="anonymous"></script>*@
+
+
+<style>
+    input[type="file"] {
+        display: none;
+    }
+
+    .ChooseFile {
+        background-color: green;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        text-align: center;
+        color: #fff !important;
+        border-radius: 5px;
+        width: 30%;
+    }
+
+        .ChooseFile:hover {
+            background-color: lightgreen;
+        }
+</style>
+<div class="container" style="background-color:white ; width:80% ;margin-top:50px;margin-right:80px;">
+    <div class="row flex-lg-nowrap">
+        <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="e-profile">
+                            <div class="row">
+                                <div class="col-12 col-sm-auto mb-3">
+                                    <div class="mx-auto" style="width: 140px;">
+                                        <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                            @*<img src="@Url.Content(Session["imgPath"].ToString())" id="blah" height="135" width="135">*@
+
+                                            <img src="@Url.Content(Session["imgPath"].ToString())" id="blah" alt="user image" height="135" width="135" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                    <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                        <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">@Session["StudentName"].ToString()</h4>
+
+                                    </div>
+                                    <div class="text-center text-sm-right">
+                                        <span class="badge badge-secondary">Student</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item"><a href="" class="active nav-link">Settings</a></li>
+                            </ul>
+                            <div class="tab-content pt-3">
+                                <div class="tab-pane active">
+                                    @using (Html.BeginForm("ProfileSetting", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        @*@Html.HiddenFor(x => x.Password, new { id = "hdnFlag" })*@
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label>Name</label>
+                                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = @Html.DisplayName("Enter UserName") } })
+                                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label>Contact Number</label>
+                                                            @Html.EditorFor(model => model.ContactNo, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = @Html.DisplayName("Enter UserName") } })
+                                                            @Html.ValidationMessageFor(model => model.ContactNo, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label>Email</label>
+                                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = @Html.DisplayName("Enter Contact Number") } })
+                                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label>Address</label>
+                                                            @Html.TextAreaFor(model => model.Address, 5, 40, htmlAttributes: new { style = "width: 100%; max-width: 100%;", placeholder = @Html.DisplayName("Enter School Address") })
+                                                            @*@Html.ValidationMessageFor(model => model.School_Address, "", new { @class = "text-danger" })*@
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label>Password</label>
+
+                                                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "Password", @Value = Model.Password } })
+                                                            @*@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })*@
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+
+                                                                    <label for="UserImageFIle" class="ChooseFile  mb-1 p-2">Change Image</label><br />
+                                                                    <input type='file' id="UserImageFIle" name="UserImageFIle" accept="image/png,image/jpg,image/jpeg" onchange="validateFileType()" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col d-flex justify-content-end">
+                                                            <div class="form-group">
+                                                                <button class="btn btn-success" type="submit">Save Changes</button>
+
+                                                            </div>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+                                    }
+
+                                    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+                                    <script src="~/Scripts/jquery.validate.min.js"></script>
+                                    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+                                    <script>
+
+
+
+
+                                        function validateFileType() {
+
+
+                                            var fileName = document.getElementById("UserImageFIle").value;
+                                            var idxDot = fileName.lastIndexOf(".") + 1;
+                                            var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+                                            if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
+                                                //TO DO
+                                            } else {
+                                                $('#DummyButton').trigger('click');
+                                            }
+                                        }
+
+
+
+                                        function readURL(input) {
+                                            if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#blah').attr('src', e.target.result);
+                                                }
+
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        }
+
+                                        $("#UserImageFIle").change(function () {
+                                            readURL(this);
+                                        });
+
+                                    </script>
+
+                                    @if (ViewBag.Message != null)
+                                    {
+                                        <script type="text/javascript">
+
+                                            window.onload = function () {
+                                                alert("@ViewBag.Message");
+                                            };
+                                        </script>
+
+                                    }
+
+
+                                    </>

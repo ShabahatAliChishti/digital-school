@@ -1,0 +1,83 @@
+﻿@model digital_School.ViewModel.tblStudentComplainValidation
+
+<!-- Mirrored from www.konnectplugins.com/edu-course/apply-course.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Mar 2020 15:49:18 GMT -->
+<head>
+    @{
+        ViewBag.Title = "compalinform";
+
+        Layout = "~/Areas/Principle/Views/Shared/_Layout.cshtml";
+    }
+
+</head>
+
+
+<div class="content-wrapper" style="margin-top:50px;">
+    <div class="card card-info">
+        <div class="card-header ">
+            <h3 class="card-title ">Student Complain Reply</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            </div>
+
+            <form class="form-horizontal">
+                <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-md-1"></div>
+
+                        <label for="inputEmail3" class="col-md-2 col-lg-1 col-form-label">Reply</label>
+                        <div class="col-md-8 col-lg-8">
+                            @Html.TextAreaFor(model => model.ReplyMsg, 8, 40, htmlAttributes: new { required = "required", style = "width: 100%; max-width: 100%;", placeholder = @Html.DisplayName("Enter Complain Repy") })
+                            @Html.ValidationMessageFor(model => model.ReplyMsg, "", new { @class = "text-danger" })
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <button type="submit" class="btn btn-info float-right">Submit</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <button type="submit" class="btn btn-default float-left ">Cancel</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.card-footer -->
+            </form>
+        }
+    </div>
+
+
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+         window.onload = function () {
+          alert("@ViewBag.Message");
+          };
+    </script>
+
+}

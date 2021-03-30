@@ -1,0 +1,294 @@
+﻿@model digital_School.ViewModel.tbl_OnlineTestValidation
+@{
+    ViewBag.Title = "addonlinetest";
+    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper" style="margin-top:50px;">
+    <div class="card card-info">
+        <div class="card-header ">
+            <h3 class="card-title ">Online Test</h3>
+        </div>
+        <div ng-controller="headerCtrl">
+            <div class="container" style="background-color:white ; width:100% ;height:100%;align-content:center">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <section>
+                                <div class="row">
+                                    <div class="col-md-10 offset-md-1">
+
+                                        @using (Html.BeginForm("addonlinetest", "OnlineTest", FormMethod.Post))
+                                        {
+                                            @Html.AntiForgeryToken()
+
+                                            <div class="form-horizontal">
+
+                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.Label("Course", htmlAttributes: new { @class = "control-label col-md-4" })
+                                                <div class="col-md-12">
+
+                                                    @Html.DropDownListFor(model => model.CourseId, (SelectList)ViewBag.course, "Select Course", new { required = "required", @class = "form-control", @id = "ddCourseId" })
+
+                                                    @Html.ValidationMessageFor(x => Model.CourseId, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            @*<div class="form-group">
+                                                    @Html.Label("Class", htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <div class="col-md-6 col-sm-8 col-12">
+
+                                                        @Html.DropDownListFor(model => model.ClassId, (SelectList)ViewBag.school, "Select Class", new { required = "required", @class = "form-control", @id = "ddClassId" })
+
+                                                        @Html.ValidationMessageFor(x => Model.ClassId, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>*@
+
+
+                                            @*<div class="form-group">
+                                                    @Html.Label("Duration", htmlAttributes: new { @class = "control-label col-md-4" })
+                                                    <div class="col-md-12">
+                                                        @Html.EditorFor(model => model.Duration, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Duration") } })
+                                                        @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>*@
+
+                                            <div class="form-group">
+                                                @Html.Label("Question", htmlAttributes: new { @class = "control-label col-md-4" })
+                                                <div class="col-md-12">
+                                                    @Html.TextAreaFor(model => model.QuestionName, 4, 128, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Question"), @id = "QuestionName" } })
+                                                    @Html.ValidationMessageFor(model => model.QuestionName, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.Label("Option", htmlAttributes: new { @class = "control-label col-md-4" })
+                                                <div class="col-md-12">
+                                                    @Html.EditorFor(model => model.OptionName, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text", placeholder = @Html.DisplayName("Enter Option Name"), @id = "txtOptionName" } })
+                                                    @Html.ValidationMessageFor(model => model.OptionName, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+                                            @*<div class="form-group">
+                                                    @Html.LabelFor(m => m.Date, new { @class = "col-md-2 control-label" }),
+                                                    <div class="col-md-10">
+                                                        @Html.TextBoxFor(m => m.Date, "{0:yyyy-MM-ddThh:mm:ss}", new { @class = "form-control", type = "datetime-local" })
+                                                        @Html.ValidationMessageFor(m => m.Date, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>*@
+
+                                            <div class="form-group ">
+                                                <div class="col-lg-4  col-md-5 col-sm-6 col-6">
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group ">
+
+                                                <div class="col-md-8">
+                                                    <input id="btnAddOption" type="button" class="btn btn btn-success" name="Option" value="Add Option" />
+
+                                                    @*<input type="button" class="btn btn btn-success"  value="Add" />*@
+
+                                                </div>
+
+                                            </div>
+
+                                        }
+                                        <table id="tblOption" class="table table-condensed" style="width: 100%"></table>
+                                        <div class="form-group">
+                                            <div class="col-md-4">
+                                                <input type="button" id="btnAdd" value="ADD" name="ADD" class="btn btn btn-success" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+<script type="text/javascript">
+        $(document).ready(function () {
+
+
+            $("#btnAddOption").click(function () {
+
+                AddOptionIntoList();
+            });
+
+            $("#btnAdd").click(function () {
+                SaveQuestionAndOption();
+
+            });
+
+        });
+
+
+
+        function SaveQuestionAndOption() {
+
+            if ($("#tblOption tr").length !== 4) {
+                alert("Option should not more and less then 4");
+                return false;
+            }
+            var answerText = "";
+            var answerValid = undefined;
+
+
+            $.each($("#tblOption tr"),
+                function () {
+                    answerText = $(this).find("td:eq(0) input[type=radio]:checked").val();
+
+                    if (answerText !== undefined) {
+                        answerValid = answerText;
+
+                    }
+                });
+            if (answerValid === undefined) {
+                alert("Select The Answer");
+                return false;
+            }
+
+
+            var ListOfOptions = [];
+            var answerTextData = "";
+            var QuestionOption = {};
+            var OptionText = "";
+            $.each($("#tblOption tr"),
+                function () {
+                    debugger
+
+                    answerText = $(this).find("td:eq(0) input[type=radio]:checked").val();
+                    OptionText = $(this).find("td:eq(0) input[type=radio]").val();
+                    if (answerText !== undefined) {
+                        answerTextData = answerText;
+
+                    }
+                    ListOfOptions.push(OptionText);
+                });
+
+
+            QuestionOption.ListOfOptions = ListOfOptions;
+            QuestionOption.AnswerText = answerTextData;
+            QuestionOption.QuestionName = $("#QuestionName").val();
+            QuestionOption.CourseId = $('#ddCourseId').val();
+
+            debugger
+            $.ajax({
+
+                async: true,
+                type: 'POST',
+                dataType: 'JSON',
+                data: JSON.stringify(QuestionOption),
+                url: '@Url.Action("addonlinetest","Home", new { Area = "Teacher" })',
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    if (data.success === true) {
+
+                        alert(data.message);
+                        $("#QuestionName").val("");
+                        $("#QuestionName").focus();
+                        $("#ddCourseId").val("");
+                        $("#tblOption tr").remove();
+                        $("#txtOptionNam").val("");
+
+                    }
+                    else {
+                        alert(data.message);
+                    }
+                },
+                error: function () {
+                    alert('There is Some Problem to process your request try after some time');
+                }
+
+            });
+
+        }
+
+
+        function AddOptionIntoList() {
+            //txtOptionName
+            //tblOption
+            if ($("#QuestionName").val() == "") {
+                alert("Question  name should not be empty");
+                $("#QuestionName").focus();
+                return false;
+            }
+
+
+            if ($("#txtOptionName").val() == "") {
+                alert("Option name should not be empty");
+                $("#txtOptionName").focus();
+                return false;
+            }
+
+            if ($("#tblOption tr").length == 4) {
+
+                $("#txtOptionName").focus();
+                $("#txtOptionName").val("");
+                alert("Option should not more then 4");
+                return false;
+            }
+
+            var isSuccess = false;
+            $.each($("#tblOption tr"),
+                function () {
+
+                    var listedValue = $(this).find("td:eq(0) input[type=radio]").val();
+                    if (listedValue === $("#txtOptionName").val()) {
+
+                        $("#txtOptionName").focus();
+                        $("#txtOptionName").val("");
+                        alert("Its already isted");
+                        isSuccess = true;
+                    }
+
+
+                });
+
+
+
+            if (isSuccess == true) {
+                return false;
+            }
+
+            var OptionName = $("#txtOptionName").val();
+            var rowAdded = "<tr><td> <input type='radio' value="
+                + OptionName + " name='OptionName' />" +
+                OptionName +
+                " </td></tr>";
+
+            $("#tblOption").append(rowAdded);
+            $("#txtOptionName").focus();
+            $("#txtOptionName").val("");
+        }
+
+</script>
+
+
+
+
+
+
+

@@ -1,0 +1,546 @@
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\digital_School.dll.config
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\digital_School.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\digital_School.pdb
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\csc.exe
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\csc.exe.config
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\csc.rsp
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\csi.exe
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\csi.exe.config
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\csi.rsp
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.AppContext.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Console.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.IO.Compression.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Security.Claims.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.ValueTuple.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\vbc.exe
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\vbc.exe.config
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\vbc.rsp
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\Antlr3.Runtime.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\Newtonsoft.Json.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.Helpers.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.Mvc.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.Optimization.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.Razor.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.WebPages.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.WebPages.Razor.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\WebGrease.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.Helpers.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.Mvc.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.Optimization.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.Razor.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.WebPages.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\System.Web.WebPages.Razor.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\Newtonsoft.Json.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\Antlr3.Runtime.pdb
+C:\Users\Faizan\Documents\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Faizan\Documents\digital_School\digital_School\obj\Debug\digital_School.csprojAssemblyReference.cache
+C:\Users\Faizan\Documents\digital_School\digital_School\obj\Debug\digital_School.csproj.CopyComplete
+C:\Users\Faizan\Documents\digital_School\digital_School\obj\Debug\digital_School.dll
+C:\Users\Faizan\Documents\digital_School\digital_School\obj\Debug\digital_School.pdb
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\digital_School.dll.config
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\digital_School.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\digital_School.pdb
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\csc.exe
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\csc.exe.config
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\csc.rsp
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\csi.exe
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\csi.exe.config
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\csi.rsp
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.AppContext.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Console.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Compression.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Claims.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.ValueTuple.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\vbc.exe
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\vbc.exe.config
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\vbc.rsp
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\Antlr3.Runtime.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\Newtonsoft.Json.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.Helpers.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.Mvc.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.Optimization.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.Razor.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.WebPages.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Razor.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\WebGrease.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.Helpers.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.Mvc.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.Optimization.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.Razor.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.WebPages.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Razor.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\Newtonsoft.Json.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\Antlr3.Runtime.pdb
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\obj\Debug\digital_School.csprojResolveAssemblyReference.cache
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\obj\Debug\digital_School.dll
+C:\Users\Chishti\Downloads\digital_School\digital_School\digital_School\obj\Debug\digital_School.pdb
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\digital_School.dll.config
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\digital_School.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\digital_School.pdb
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\csc.exe
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\csc.exe.config
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\csc.rsp
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\csi.exe
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\csi.exe.config
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\csi.rsp
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.AppContext.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Console.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Compression.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Claims.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.ValueTuple.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\vbc.exe
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\vbc.exe.config
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\vbc.rsp
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\Antlr3.Runtime.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\Newtonsoft.Json.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.Helpers.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.Mvc.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.Optimization.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.Razor.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.WebPages.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Razor.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\WebGrease.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.Helpers.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.Mvc.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.Optimization.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.Razor.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.WebPages.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Razor.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\Newtonsoft.Json.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\Antlr3.Runtime.pdb
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\obj\Debug\digital_School.csprojAssemblyReference.cache
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\obj\Debug\digital_School.csproj.CopyComplete
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\obj\Debug\digital_School.dll
+C:\Users\Faizan\Downloads\Documents\digital_School\digital_School\digital_School\obj\Debug\digital_School.pdb
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\digital_School.dll.config
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\digital_School.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\digital_School.pdb
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\csc.exe
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\csc.exe.config
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\csc.rsp
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\csi.exe
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\csi.exe.config
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\csi.rsp
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.Managed.Core.targets
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.AppContext.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Collections.Immutable.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Console.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Compression.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.IO.Pipes.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Reflection.Metadata.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Security.AccessControl.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Claims.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Security.Principal.Windows.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.ValueTuple.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XmlDocument.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XPath.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\vbc.exe
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\vbc.exe.config
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\vbc.rsp
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe.config
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\Antlr3.Runtime.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\Microsoft.Web.Infrastructure.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\Newtonsoft.Json.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.Helpers.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.Mvc.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.Optimization.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.Razor.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Deployment.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.WebPages.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Razor.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\WebGrease.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.Helpers.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.Mvc.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.Optimization.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.Razor.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.WebPages.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Deployment.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\System.Web.WebPages.Razor.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\Newtonsoft.Json.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\Antlr3.Runtime.pdb
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\obj\Debug\digital_School.csprojResolveAssemblyReference.cache
+E:\digital_School (4)\digital_School\digital_School\digital_School\obj\Debug\digital_School.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\obj\Debug\digital_School.pdb
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\EntityFramework.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\EntityFramework.SqlServer.dll
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\EntityFramework.xml
+E:\digital_School (4)\digital_School\digital_School\digital_School\bin\EntityFramework.SqlServer.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\digital_School.dll.config
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\digital_School.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\digital_School.pdb
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\csc.exe
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\csc.exe.config
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\csc.rsp
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\csi.exe
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\csi.exe.config
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\csi.rsp
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.AppContext.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Console.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.IO.Compression.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Security.Claims.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.ValueTuple.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\vbc.exe
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\vbc.exe.config
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\vbc.rsp
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\Antlr3.Runtime.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\EntityFramework.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\EntityFramework.SqlServer.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\Newtonsoft.Json.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.Helpers.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.Mvc.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.Optimization.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.Razor.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.WebPages.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.WebPages.Razor.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\WebGrease.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\EntityFramework.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\EntityFramework.SqlServer.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.Helpers.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.Mvc.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.Optimization.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.Razor.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.WebPages.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\System.Web.WebPages.Razor.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\Newtonsoft.Json.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\Antlr3.Runtime.pdb
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\obj\Debug\digital_School.csproj.CopyComplete
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\obj\Debug\digital_School.dll
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\obj\Debug\digital_School.pdb
+C:\Users\Faizan\Downloads\Compressed\digital_School\digital_School\obj\Debug\digital_School.csprojAssemblyReference.cache
+E:\digital_School (5)\digital_School\digital_School\bin\digital_School.dll.config
+E:\digital_School (5)\digital_School\digital_School\bin\digital_School.dll
+E:\digital_School (5)\digital_School\digital_School\bin\digital_School.pdb
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\csc.exe
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\csc.exe.config
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\csc.rsp
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\csi.exe
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\csi.exe.config
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\csi.rsp
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.Managed.Core.targets
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.AppContext.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Collections.Immutable.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Console.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.Compression.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.Pipes.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Reflection.Metadata.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.AccessControl.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Claims.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Principal.Windows.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.ValueTuple.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Xml.XmlDocument.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Xml.XPath.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\vbc.exe
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\vbc.exe.config
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\vbc.rsp
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe
+E:\digital_School (5)\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe.config
+E:\digital_School (5)\digital_School\digital_School\bin\Antlr3.Runtime.dll
+E:\digital_School (5)\digital_School\digital_School\bin\EntityFramework.dll
+E:\digital_School (5)\digital_School\digital_School\bin\EntityFramework.SqlServer.dll
+E:\digital_School (5)\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\digital_School (5)\digital_School\digital_School\bin\Microsoft.Web.Infrastructure.dll
+E:\digital_School (5)\digital_School\digital_School\bin\Newtonsoft.Json.dll
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.Helpers.dll
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.Mvc.dll
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.Optimization.dll
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.Razor.dll
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.Deployment.dll
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.dll
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.Razor.dll
+E:\digital_School (5)\digital_School\digital_School\bin\WebGrease.dll
+E:\digital_School (5)\digital_School\digital_School\bin\EntityFramework.xml
+E:\digital_School (5)\digital_School\digital_School\bin\EntityFramework.SqlServer.xml
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.Helpers.xml
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.Mvc.xml
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.Optimization.xml
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.Razor.xml
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.xml
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.Deployment.xml
+E:\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.Razor.xml
+E:\digital_School (5)\digital_School\digital_School\bin\Newtonsoft.Json.xml
+E:\digital_School (5)\digital_School\digital_School\bin\Antlr3.Runtime.pdb
+E:\digital_School (5)\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\digital_School (5)\digital_School\digital_School\obj\Debug\digital_School.csprojResolveAssemblyReference.cache
+E:\digital_School (5)\digital_School\digital_School\obj\Debug\digital_School.dll
+E:\digital_School (5)\digital_School\digital_School\obj\Debug\digital_School.pdb
+E:\digital_School (5)\digital_School\digital_School\bin\PagedList.dll
+E:\digital_School (5)\digital_School\digital_School\bin\PagedList.Mvc.dll
+E:\digital_School (5)\digital_School\digital_School\bin\PagedList.xml
+E:\digital_School (5)\digital_School\digital_School\bin\PagedList.Mvc.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\digital_School.dll.config
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\digital_School.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\digital_School.pdb
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\csc.exe
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\csc.exe.config
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\csc.rsp
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\csi.exe
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\csi.exe.config
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\csi.rsp
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.AppContext.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Console.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.Compression.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Claims.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.ValueTuple.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\vbc.exe
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\vbc.exe.config
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\vbc.rsp
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\Antlr3.Runtime.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\EntityFramework.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\EntityFramework.SqlServer.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\Newtonsoft.Json.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\PagedList.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\PagedList.Mvc.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.Helpers.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.Mvc.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.Optimization.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.Razor.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.Razor.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\WebGrease.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\EntityFramework.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\EntityFramework.SqlServer.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\PagedList.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\PagedList.Mvc.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.Helpers.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.Mvc.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.Optimization.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.Razor.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\System.Web.WebPages.Razor.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\Newtonsoft.Json.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\Antlr3.Runtime.pdb
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\obj\Debug\digital_School.csprojAssemblyReference.cache
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\obj\Debug\digital_School.csproj.CopyComplete
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\obj\Debug\digital_School.dll
+C:\Users\Faizan\Downloads\Music\digital_School (5)\digital_School\digital_School\obj\Debug\digital_School.pdb

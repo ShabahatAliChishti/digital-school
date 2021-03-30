@@ -1,0 +1,118 @@
+﻿@model IEnumerable<digital_School.ViewModel.tbl_LectureValidation>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+@{
+    ViewBag.Title = "viewuploadLecture";
+    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+}
+</head>
+<body id="page-top">
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+
+            <!-- End of Topbar -->
+            <!-- Begin Page Content -->
+            <div class="container" style="background-color:white ; width:80% ;margin-top:50px;margin-right:80px;">
+
+                <!-- Page Heading -->
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Lecture</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="MyTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Course Name</th>
+                                        <th>Lecture Name</th>
+                                        <th>Date</th>
+                                        <th>Lecture URL</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr id="row_@item.LectureId">
+                                            <td>
+                                                @item.CourseName
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelitem => item.Lecturename)
+                                            </td>
+
+                                            <td>
+                                                    @item.Date
+                                            </td>
+                                            <td>
+                                                <a href="~/file_upload/@item.LectureUrl" />
+                                                @Html.DisplayFor(modelitem => item.LectureUrl)
+                                            </td>
+
+                                            <td>
+                                                <a href="@Url.Action("updateLacture",new {id = item.LectureId, item.Lecturename })" class="btn btn-success">Edit</a>
+                                            </td>
+
+                                        </tr>
+
+                                    }
+
+
+
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+            </div>
+        </div>
+   
+        
+        <!-- End of Main Content -->
+        <!-- Footer -->
+        
+    
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,320 @@
+﻿@model digital_School.Models.UserEnrollInCourse
+
+
+@{
+    Layout = "~/Areas/Principle/Views/Shared/_Layout.cshtml";
+}
+@using (@Html.BeginForm("Action", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+    </div>
+        <div class="container">
+
+
+
+            <div class="form-group">
+                <label class="col-sm-12 control-label">
+                    Student Reg No
+                </label>
+                <div class="col-md-12">
+                    @Html.DropDownList("ddlstudentname", (SelectList)ViewData["student_name"], "-Select Registration - No", new { onchange = "Action(this.value);", @class = "form-control", @id = "RegistrationId" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-12 control-label">
+                    Name
+                </label>
+                <div class="col-md-12">
+                    @Html.TextBox("StudentName", null, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-12 control-label">
+                    Email
+                </label>
+                <div class="col-md-12">
+                    @Html.TextBox("Email", null, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-12 control-label">
+                    Class
+                </label>
+                <div class="col-md-12">
+                    @Html.TextBox("Class", null, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-12 control-label">
+                    Section
+                </label>
+                <div class="col-md-12">
+                    @Html.TextBox("Section", null, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-12 control-label">
+                    Select Course
+                </label>
+                <div class="col-md-12">
+
+                    @Html.DropDownList("ddlcourse", (SelectList)ViewData["course_name"], "-Select Course--", new { onchange = "Action(this.value);", @class = "form-control", @id = "CourseId" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" id="Submit" name="Submit" value="Enroll" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+}
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+         window.onload = function () {
+          alert("@ViewBag.Message");
+          };
+    </script>
+
+}
+
+<script type="text/javascript">
+    function Action(RegNo) {
+$.ajax({
+    url: '@Url.Action("Action", "Course", new { Area = "Principle" })',
+    type: "POST",
+    data: { "RegNo": RegNo },
+    success: function (data) {
+        if (data != null) {
+            var vdata = data;
+            $("#StudentName").val(vdata[0].Name);
+            $("#Email").val(vdata[0].Email);
+            $("#Class").val(vdata[0].Class);
+            $("#Section").val(vdata[0].Section);
+
+
+        }
+    }
+});
+    }
+
+    $("#Submit").click(function () {
+        var regNo = $("#RegistrationId").val();
+        if (regNo === "") {
+            alert("Select Your Registration No");
+            return false;
+        }
+        //var date = $("#EnrollDate").val();
+        //if (date === "") {
+        //    alert("Select Date");
+        //    return false;
+        //}
+        var courseId = $("#CourseId").val();
+        debugger
+        //alert(courseId);
+        var jsnData = { regNo: regNo, courseId: courseId };
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("IsEnrolled", "Course", new { Area = "Principle" })',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(jsnData),
+            dataType: "json",
+            success: function (data) {
+                if (data === false) {
+                    var jsnFormatData = { RegistrationId: regNo, CourseId: courseId};
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("EnrollCoursetoStudent", "Course", new { Area = "Principle" })',
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(jsnFormatData),
+                        dataType: "json",
+                        success: function (data) {
+                            alert("Successfully Enrolled!");
+                            $("#RegistrationId").prop("selectedIndex", 0);
+                            $("#StudentName").val("");
+                            $("#Email").val("");
+                            $("#Class").val("");
+                            $("#Section").val("");
+                            $("#CourseId").empty();
+                        }
+                    });
+                    return false;
+                }
+                alert("This Student is already enrolled in this course");
+                return false;
+            }
+        });
+        return false;
+    });
+
+</script>
+
+@*function Action(Id) {
+            debugger;
+            $.ajax({
+                    url: '@Url.Action("Action", "Home", new { Area = "Principle" })',
+                    type: 'POST',
+                    data: { "Id": Id },
+                    "success": function (data) {
+                        debugger;
+
+                        if (data.success === true) {
+
+                            alert(data);
+                            //$("#ChainName").val(vdata[0].Name);
+                            alert($("#ChainName").val(data[0].Name));
+
+                            //$("#ChainCode").val(vdata[0].Id);
+                         }
+                    else {
+                        alert(data.message);
+                    }
+                },
+                error: function () {
+                    alert('There is Some Problem to process your request try after some time');
+                }
+
+            });
+
+
+
+
+
+        }
+    </script>*@
+
+
+
+
+
+
+
+
+@*<script>
+        $(document).ready(function() {
+            debugger;
+             $("#RegistrationId").change(function() {
+                 var regNo = $("#RegistrationId").val();
+                 var jsnFormatData = { regNo: regNo };
+
+                 $.ajax({
+                     type: "POST",
+                     url: '@Url.Action("GetStudentById", "Home", new { Area = "Principle" })',
+                     contentType: "application/json; charset=utf-8",
+                     data: JSON.stringify(jsnFormatData),
+                     dataType:"json",
+                     success: function (data) {
+                         $.each(data, function (key, value) {
+
+                             $("#name").val("shabahat");
+                             $("#email").val("shabahat97@yqahoo.com");
+                             //$("#department").val(value.d.DeptName);
+
+                             var deptCode = 2;
+                             $("#CourseId").empty();
+                             var jsnData = { deptCode: deptCode };
+
+                             $.ajax({
+                                 type: "POST",
+                                 url: '@Url.Action("GetCoursesbyDept", "Home", new { Area = "Principle" })',
+                                 contentType: "application/json; charset=utf-8",
+                                 data: JSON.stringify(jsnData),
+                                 dataType: "json",
+                                 success: function (dataa) {
+                                     $.each(dataa, function (key1, value1) {
+
+                                         $("#CourseId").append('<option value=' + value1.courseId + '>' + value1.Code + '</option>');
+                                     });
+                                 }
+                             });
+                         });
+                     }
+                 });
+
+                 return false;
+             });
+            $("#Submit").click(function () {
+                var regNo = $("#RegistrationId").val();
+                if (regNo === "") {
+                    alert("Select Your Registration No");
+                    return false;
+                }
+                var date = $("#EnrollDate").val();
+                if (date === "") {
+                    alert("Select Date");
+                    return false;
+                }
+                var courseId = $("#CourseId").val();
+                //alert(courseId);
+                var jsnData = { regNo: regNo, courseId: courseId };
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("IsEnrolled","EnrollCourse")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(jsnData),
+                    dataType: "json",
+                    success: function (data) {
+                        if (data === false) {
+                            var jsnFormatData = { RegistrationId: regNo, CourseId: courseId, EnrollDate: date };
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("EnrollCoursetoStudent","EnrollCourse")',
+                                contentType: "application/json; charset=utf-8",
+                                data: JSON.stringify(jsnFormatData),
+                                dataType: "json",
+                                success: function (data) {
+                                    alert("Successfully Enrolled!");
+                                    $("#RegistrationId").prop("selectedIndex", 0);
+                                    $("#name").val("");
+                                    $("#email").val("");
+                                    $("#department").val("");
+                                    $("#CourseId").empty();
+                                    $("#EnrollDate").val('mm/dd/yyyy');
+                                }
+                            });
+                            return false;
+                        }
+                        alert("This Student is already enrolled in this course");
+                        return false;
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script>*@
+@*<div class="jumbotron">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("GetStudentById", "Home", new { Area = "Principle" })',
+                data: "{}",
+                success: function (data) {
+                    var s = '<option value="-1">Please Select a Car</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        s += '<option value="' + data[i].CarModel + '">' + data[i].CarName + '</option>';
+                    }
+                    $("#departmentsDropdown").html(s);
+                }
+            });
+        });
+
+        function getValue() {
+            var myVal = $("#departmentsDropdown").val();
+            $("#show").val(myVal);
+        }
+
+    </script>*@
+@*</div>*@
